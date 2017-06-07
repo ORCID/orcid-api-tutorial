@@ -8,12 +8,14 @@ MkDocs version of ORCID API workshop materials
 
 ## Start development environment
 1. Clone project
-  cd ~/git
-  git clone git@github.com:ORCID/orcid-api-tutorial.git
+
+        cd ~/git
+        git clone git@github.com:ORCID/orcid-api-tutorial.git
   
 2. Start local server
-  cd orcid-api-tutorial
-  mkdocs serve
+
+        cd orcid-api-tutorial
+        mkdocs serve
 
 3. Open http://127.0.0.1:8000/ in a browser to view site 
 4. Add/edit pages per http://www.mkdocs.org/user-guide/writing-your-docs (mkdocs server will reload changes automatically)
