@@ -1,0 +1,4 @@
+site_name: ORCID API Tutorial
+theme_dir: cinder
+pages:
+    - Home: index.md
