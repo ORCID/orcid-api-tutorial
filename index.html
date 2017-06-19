@@ -1,168 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="shortcut icon" href="./img/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Hands-on with the ORCID API</title>
+  
 
-    <title>Hands-on with the ORCID API</title>
+  <link rel="shortcut icon" href="./img/favicon.ico">
 
-    <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/highlight.css">
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  <link href="./css/theme_override.css" rel="stylesheet">
 
-    <link href="./css/theme_override.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <script>
-    WebFont.load({
-        google: {
-            families: ['Open Sans', 'PT Sans']
-        }
-    });
-    </script>
-
-    
+  
 </head>
 
-<body class="homepage" >
+<body class="wy-body-for-nav" role="document">
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+  <div class="wy-grid-for-nav">
 
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            
-
-            <!-- Main title -->
-            <a class="navbar-brand" href=".">Hands-on with the ORCID API</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
-    </div>
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Hands-on with the ORCID API</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
 </div>
+      </div>
 
-    <div class="container">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
         
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-    
-        <li class="first-level active"><a href="#0-welcome">0. WELCOME</a></li>
+            <ul>
+            
+                <li class="toctree-l3"><a href="#0-welcome">0. WELCOME</a></li>
+                
+                    <li><a class="toctree-l4" href="#01-about-the-orcid-apis">0.1 About the ORCID APIs</a></li>
+                
+                    <li><a class="toctree-l4" href="#02-pre-requisites">0.2 Pre-requisites</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#1-set-up-the-sandbox">1. SET UP THE SANDBOX</a></li>
+                
+                    <li><a class="toctree-l4" href="#11-create-a-sandbox-orcid-record">1.1 Create a Sandbox ORCID record</a></li>
+                
+                    <li><a class="toctree-l4" href="#12-verify-your-email-address">1.2 Verify your email address</a></li>
+                
+                    <li><a class="toctree-l4" href="#13-add-info-to-your-sandbox-record">1.3 Add info to your Sandbox record</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-read-public-info">2. READ PUBLIC INFO</a></li>
+                
+                    <li><a class="toctree-l4" href="#21-read-a-record-summary">2.1 Read a record summary</a></li>
+                
+                    <li><a class="toctree-l4" href="#22-read-activity-details">2.2 Read activity details</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-search-public-info">3. SEARCH PUBLIC INFO</a></li>
+                
+                    <li><a class="toctree-l4" href="#31-search-for-records-with-an-institutional-affiliation">3.1 Search for records with an institutional affiliation</a></li>
+                
+                    <li><a class="toctree-l4" href="#32-paging-through-search-results">3.2 Paging through search results</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-collect-get-authenticated-ids-permission">4. COLLECT: GET AUTHENTICATED iDs &amp; PERMISSION</a></li>
+                
+                    <li><a class="toctree-l4" href="#41-custom-integration">4.1 Custom integration</a></li>
+                
+                    <li><a class="toctree-l4" href="#43-institutional-sign-in">4.3 Institutional sign-in</a></li>
+                
+                    <li><a class="toctree-l4" href="#43-vendor-systems">4.3 Vendor systems</a></li>
+                
+                    <li><a class="toctree-l4" href="#44-share-my-id">4.4 Share my iD</a></li>
+                
+                    <li><a class="toctree-l4" href="#43-other-metadata-sources">4.3 Other metadata sources</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#6-connect-add-info">6. CONNECT: ADD INFO</a></li>
+                
+                    <li><a class="toctree-l4" href="#61-add-an-affiliation">6.1 Add an affiliation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#7-synchronize-update-info">7. SYNCHRONIZE: UPDATE INFO</a></li>
+                
+                    <li><a class="toctree-l4" href="#71-update-an-affiliation">7.1 Update an Affiliation</a></li>
+                
+            
+            </ul>
         
-            <li class="second-level"><a href="#01-about-the-orcid-apis">0.1 About the ORCID APIs</a></li>
-            
-        
-            <li class="second-level"><a href="#02-pre-requisites">0.2 Pre-requisites</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#1-the-sandbox">1. THE SANDBOX</a></li>
-        
-            <li class="second-level"><a href="#11-create-a-sandbox-orcid-record">1.1 Create a Sandbox ORCID record</a></li>
-            
-        
-            <li class="second-level"><a href="#12-verify-your-email-address">1.2 Verify your email address</a></li>
-            
-        
-            <li class="second-level"><a href="#13-add-info-to-your-sandbox-record">1.3 Add info to your Sandbox record</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#2-read-public-info">2. READ PUBLIC INFO</a></li>
-        
-            <li class="second-level"><a href="#21-read-a-record-summary">2.1 Read a record summary</a></li>
-            
-        
-            <li class="second-level"><a href="#22-read-activity-details">2.2 Read activity details</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#3-search-public-info">3. SEARCH PUBLIC INFO</a></li>
-        
-            <li class="second-level"><a href="#31-search-for-records-with-an-institutional-affiliation">3.1 Search for records with an institutional affiliation</a></li>
-            
-        
-            <li class="second-level"><a href="#32-paging-through-search-results">3.2 Paging through search results</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#4-get-authenticated-ids-permission">4. GET AUTHENTICATED iDs &amp; PERMISSION</a></li>
-        
-            <li class="second-level"><a href="#41-the-old-fashioned-way">4.1 The old-fashioned way</a></li>
-            
-                <li class="third-level"><a href="#411-get-api-credentials">4.1.1 Get API credentials</a></li>
-            
-                <li class="third-level"><a href="#412-create-an-authorization-url">4.1.2 Create an authorization URL</a></li>
-            
-                <li class="third-level"><a href="#413-get-an-authorization-code">4.1.3 Get an authorization Code</a></li>
-            
-                <li class="third-level"><a href="#414-exchange-authorization-code-for-access-token-authenticated-id">4.1.4 Exchange authorization code for access token &amp; authenticated iD</a></li>
-            
-        
-            <li class="second-level"><a href="#42-institutional-sign-in">4.2 Institutional sign-in</a></li>
-            
-                <li class="third-level"><a href="#421-get-api-credentials">4.2.1 Get API credentials</a></li>
-            
-                <li class="third-level"><a href="#422-user-connect-your-institutional-account">4.2.2 (User) Connect your institutional account</a></li>
-            
-                <li class="third-level"><a href="#423-exchange-authorization-code-for-access-token-authenticated-id">4.2.3 Exchange authorization code for access token &amp; authenticated iD</a></li>
-            
-        
-            <li class="second-level"><a href="#43-share-my-id">4.3 Share my iD</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#6-connect-add-update-info">6. CONNECT: ADD &amp; UPDATE INFO</a></li>
-        
-            <li class="second-level"><a href="#61-add-an-affiliation">6.1 Add an affiliation</a></li>
-            
-                <li class="third-level"><a href="#education-affiliation-xml">Education affiliation XML</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#7-synchronize-update-info">7. SYNCHRONIZE: Update info</a></li>
-        
-            <li class="second-level"><a href="#71-update-an-affiliation">7.1 Update an Affiliation</a></li>
-            
-                <li class="third-level"><a href="#affiliation-end-date-xml">Affiliation end date XML</a></li>
-            
-        
-    
-        <li class="first-level "><a href="#8-display-presenting-orcid-in-your-system">8. DISPLAY: Presenting ORCID in your system</a></li>
-        
-    
-    </ul>
-</div></div>
-        <div class="col-md-9" role="main">
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
 
-<h1 id="0-welcome">0. WELCOME</h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Hands-on with the ORCID API</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="0-welcome">0. WELCOME</h1>
 <h2 id="01-about-the-orcid-apis">0.1 About the ORCID APIs</h2>
 <p>ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).</p>
 <table>
@@ -205,7 +194,7 @@
 </li>
 </ul>
 <p>Examples in this doc use <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a></p>
-<h1 id="1-the-sandbox">1. THE SANDBOX</h1>
+<h1 id="1-set-up-the-sandbox">1. SET UP THE SANDBOX</h1>
 <p>For this workshop, we'll use ORCID's test environment, the <a href="https://sandbox.orcid.org/signin">ORCID Sandbox</a>. The Sandbox works just like the production ORCID Registry, with a few exceptions:</p>
 <ul>
 <li>Sandbox only sends emails to <a href="https://www.mailinator.com/">mailinator.com</a> addresses </li>
@@ -303,8 +292,8 @@
 <img src="images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" /></li>
 </ol>
 <p>To get the entire set of results, repeat the query in step 2, changing <code>start=</code> until you've reached collected all of your results.</p>
-<h1 id="4-get-authenticated-ids-permission">4. GET AUTHENTICATED iDs &amp; PERMISSION</h1>
-<p>In our first few API requests, we already knew which ORCID iD to use (our own!) and we read/serached public information, which didn't require any permission from the user. In practice, you'll need to gather up iDs for researchers whose ORCID records you want to read, update, or associate with records in your own system AND get permission to take certain actions, like adding information to their ORCID records.</p>
+<h1 id="4-collect-get-authenticated-ids-permission">4. COLLECT: GET AUTHENTICATED iDs &amp; PERMISSION</h1>
+<p>In our first few API requests, we already knew which ORCID iD to use (our own!) and we read/searched public information, which didn't require any permission from the user. In practice, you'll need to gather up iDs for researchers whose ORCID records you want to read, update, or associate with records in your own system AND get permission to take certain actions, like adding information to their ORCID records.</p>
 <p><strong>Authenticated iDs</strong></p>
 <p>ORCID is all about identifying who's who, so it's important that you get the correct iD for each researcher. The best way to do this is to collect <strong>Authenticated ORCID iDs</strong>, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. <a href="https://orcid.org/blog/2017/02/20/whats-so-special-about-signing">Learn more about Authenticated iDs</a></p>
 <p><strong>Record access permission</strong></p>
@@ -314,7 +303,8 @@
 <li>Read non-public data (items with privacy set to 'Trusted parties')</li>
 <li>Add/update record data</li>
 </ul>
-<h2 id="41-the-old-fashioned-way">4.1 The old-fashioned way</h2>
+<h2 id="41-custom-integration">4.1 Custom integration</h2>
+<p>The most customizable way to get Authenticated iDs is by building your own API integration. In this section, we'll walk through the steps that your own custom integratio would need to complete in order to get an authenticated iD and record access permission.</p>
 <p><strong>OAuth 2.0</strong> </p>
 <p>Getting an Authenticated iD and record access permission from a user involves following <a href="https://oauth.net/2/">OAuth 2.0</a>, an industry-standard protocol for authorization. OAuth allows a user to give a website or application access to account information stored on another site, without giving that site their password. </p>
 <p>If you've ever signed into a site using Google or Facebook instead of your credentials for that particular site, you've already used OAuth!</p>
@@ -325,6 +315,9 @@
 <li>Exchange the authorization code for an access token</li>
 </ol>
 <h3 id="411-get-api-credentials">4.1.1 Get API credentials</h3>
+<p>API credentials consisting of a <strong>client ID</strong> and a <strong>client secret</strong> are needed in order to get Authenticated iDs and/or user permissions.</p>
+<p>To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. To request API credentials, see <a href="https://orcid.org/content/register-client-application">Request API credentials</a></p>
+<p>For this workshop, we'll use a set of demo credentials:</p>
 <h3 id="412-create-an-authorization-url">4.1.2 Create an authorization URL</h3>
 <p>To kick off the OAuth process, we'll need to create an special authorization URL that sends users to an ORCID sign-in screen. This URL consists of <strong>Authorization endpoint</strong>, plus <strong>Parameters</strong> that identify your organization and the permissions you want to request.</p>
 <p><strong>Authorization endpoint (Sandbox)</strong></p>
@@ -377,7 +370,7 @@
 </li>
 <li>After granting permission, you'll be redirected to the Google OAuth Playground. A 6-character code will appear at the end of the redirect URI in the browser address bar (and under the <strong>Step 2</strong> section at left)<br>
 <img src="images/04-2_auth-code-address.png" width="400" alt="ORCID OAuth sign-in screen" /><br><br>
-<img src="images/04-2_auth-code.png" width="400" alt="ORCID OAuth sign-in screen" /></li>
+<img src="images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" /></li>
 </ol>
 <h3 id="414-exchange-authorization-code-for-access-token-authenticated-id">4.1.4 Exchange authorization code for access token &amp; authenticated iD</h3>
 <p>Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. </p>
@@ -431,26 +424,48 @@
 <li>Your Access Token and Authenticated iD will appear <strong>Request/Response</strong> section at right.<br>
 <img src="images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" /></li>
 </ol>
-<h2 id="42-institutional-sign-in">4.2 Institutional sign-in</h2>
+<h2 id="43-institutional-sign-in">4.3 Institutional sign-in</h2>
 <p>ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> and <a href="https://technical.edugain.org/status.php">eduGAIN</a>.</p>
-<p>ORCID membership is not required in order for instituional sign-in to work for your researchers, however, ORCID members who are <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> or <a href="https://technical.edugain.org/status.php">eduGAIN</a> federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect &amp; Connect feature.</p>
+<p>ORCID membership is not required in order for institutional sign-in to work for your researchers, however, ORCID members who are <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> or <a href="https://technical.edugain.org/status.php">eduGAIN</a> federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect &amp; Connect feature.</p>
 <p>In this section, we'll take a look at this feature.</p>
-<h3 id="421-get-api-credentials">4.2.1 Get API credentials</h3>
-<h3 id="422-user-connect-your-institutional-account">4.2.2 (User) Connect your institutional account</h3>
+<h3 id="431-configure-api-credentials">4.3.1 Configure API credentials</h3>
+<p>In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect &amp; Connect for your organization. </p>
+<p>To have your API credentials configured for Institutional Collect &amp; Connect, contact <a href="./support@orcid.org">support@orcid.org</a> with the following information:</p>
+<ul>
+<li>Client ID</li>
+<li>Identity provider entity ID (e.g. https://idp.example.org/idp/shibboleth)</li>
+<li>Redirect URI: The page on your site that users should be directed to after they complete the cross-link process. This can bedifferent from the redirect URI you use for other ORCID API applications.</li>
+<li>Permission scope(s) that you would like (<code>/authenticate</code>, <code>/read-limited</code>, <code>/activities/update</code>, <code>/person/update</code>)</li>
+</ul>
+<h3 id="432-user-connect-your-institutional-account">4.3.2 (User) Connect your institutional account</h3>
 <p><strong>Not a member of a supported federation?</strong> Test out ORCID institutional sign-in with a <a href="https://app.unitedid.org/signup">United ID</a> account. United ID is a free and independent online identity service <em>(Note: United ID requires use of a 2-Factor Authentication method, like <a href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>)</em>.</p>
 <ol>
 <li>Sign out of your Sandbox record - click the <strong>Sign out</strong> button in the upper right corner or visit <a href="https://sandbox.orcid.org/signout">https://sandbox.orcid.org/signout</a></li>
 <li>Visit <a href="https://sandbox.orcid.org/signin">https://sandbox.orcid.org/signin</a> and click <strong>Sign in using your Institutional Account</strong></li>
 <li>Enter your organization's name in the box, or choose to pick it from the list. 
-  <img src="images/signin-inst-account.png" width="600"></li>
+  <img src="images/04-3_signin-inst-account.png" width="400" alt="ORCID sign-in screen showing institutional account sign-in"></li>
 <li>Sign into your institution account<br>
-  <img src="images/united-id-login.png" width="400"></li>
+  <img src="images/04-3_united-id-login.png" width="400" alt="United ID login screen"></li>
 <li>Finish linking your accounts by signing into ORCID with your ORCID username and password. Enter the email address / ORCID iD and password for your Sandbox account and click <strong>Sign into ORCID</strong>. <em>You will only need to complete this step once - in the future you can log directly into ORCID with your institutional account.</em><br>
-  <img src="images/link-account.png" width="600"></li>
+  <img src="images/04-3_link-account.png" width="600" alt="ORCID link accounts screen"></li>
+<li>After linking your accounts, a message appears at the top of your ORCID record, prompting you to connect your iD to your institution. Click the <strong>Connect</strong> button.<br>
+  <img src="images/04-3_inst-connect-banner.png" width="600" alt="ORCID record showing institution connect message" /></li>
+<li>An ORCID sign-in screen listing the requested permissions will appear; click <strong>Authorize</strong><br>
+  <img src="images/04-3_inst-connect-oauth.png" width="400" alt="ORCID OAuth sign-in screen" /></li>
+<li>After granting permission, you'll be redirected to the Redirect URI specified for your API credentials - this page should show a success or error message depending on whether <strong>Authorize</strong> or <strong>Deny</strong> was clicked, and it should also provide a link back to ORCID and links to your local ORCID resources.<br>
+  <img src="images/04-3_inst-connect-redirect.png" width="600" alt="Example success message shown to users after completing the institution connect process" /></li>
 </ol>
-<h3 id="423-exchange-authorization-code-for-access-token-authenticated-id">4.2.3 Exchange authorization code for access token &amp; authenticated iD</h3>
-<h2 id="43-share-my-id">4.3 Share my iD</h2>
-<h1 id="6-connect-add-update-info">6. CONNECT: ADD &amp; UPDATE INFO</h1>
+<h3 id="433-exchange-authorization-code-for-access-token-authenticated-id">4.3.3 Exchange authorization code for access token &amp; authenticated iD</h3>
+<p>Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
+  <img src="images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /> </p>
+<h2 id="43-vendor-systems">4.3 Vendor systems</h2>
+<p>Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of <a href="https://members.orcid.org/api/orcid-enabled-systems">ORCID-enabled systems</a> for more details. </p>
+<p>Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.</p>
+<h2 id="44-share-my-id">4.4 Share my iD</h2>
+<p>Need a quick way to collect authenticated iDs with no programming or IT resources needed?
+<a href="https://share-my-id.orcid.org/">Share my iD</a> is a new app from ORCID that allows anyone with an ORCID iD to get iDs from other ORCID users.</p>
+<h2 id="43-other-metadata-sources">4.3 Other metadata sources</h2>
+<h1 id="6-connect-add-info">6. CONNECT: ADD INFO</h1>
 <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.</p>
 <h2 id="61-add-an-affiliation">6.1 Add an affiliation</h2>
 <ol>
@@ -511,7 +526,7 @@
 &lt;/education:education&gt;
 </code></pre>
 
-<h1 id="7-synchronize-update-info">7. SYNCHRONIZE: Update info</h1>
+<h1 id="7-synchronize-update-info">7. SYNCHRONIZE: UPDATE INFO</h1>
 <h2 id="71-update-an-affiliation">7.1 Update an Affiliation</h2>
 <p>In a real-world situation, you may need to update a researcher's affiliation. In this section, we'll update our education affiliation to include an end date.</p>
 <ol>
@@ -545,59 +560,41 @@
   &lt;common:day&gt;31&lt;/common:day&gt;
 &lt;/common:end-date&gt;
 </code></pre>
-
-<h1 id="8-display-presenting-orcid-in-your-system">8. DISPLAY: Presenting ORCID in your system</h1></div>
-        
-    </div>
-
-    <footer class="col-md-12 text-center">
-        <hr>
-        <p>
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
-    </footer>
-
-    <script src="./js/jquery-1.10.2.min.js"></script>
-    <script src="./js/bootstrap-3.0.3.min.js"></script>
-    <script src="./js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-    var base_url = '.';
-    </script>
-    <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-    <script src="./js/base.js"></script>
-
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        From here you can search these documents. Enter your search terms below.
-                    </p>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        </div>
-                    </form>
-                    <div id="mkdocs-search-results"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
+              
             </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
         </div>
-    </div>
+      </div>
 
-    </body>
+    </section>
 
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+
+</body>
 </html>
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2017-06-19 18:30:21.459142
+Build Date UTC : 2017-06-19 22:53:32.711571
 -->
