@@ -1,0 +1,4 @@
+.bs-sidebar.well {
+    max-height: 100%;
+    overflow-y: scroll;
+}
