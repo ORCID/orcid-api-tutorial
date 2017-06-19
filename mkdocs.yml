@@ -1,4 +1,6 @@
-site_name: ORCID API Tutorial
+site_name: Hands-on with the ORCID API
 theme_dir: cinder
+extra_css: 
+    - css/theme_override.css
 pages:
     - Home: index.md
