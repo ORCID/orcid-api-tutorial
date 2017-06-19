@@ -1,5 +1,5 @@
 site_name: Hands-on with the ORCID API
-theme_dir: cinder
+theme: readthedocs
 extra_css: 
     - css/theme_override.css
 pages:
