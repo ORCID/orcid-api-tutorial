@@ -1,225 +1,343 @@
-#Explore the ORCID registry
-##Create an ORCID iD
-<img width="194" height="336" src="http://alainna.org/orcid/clip_image002.gif" align="right" hspace="12" vspace="12" alt="Screen Shot: ORCID registration screen at https://sandbox.orcid.org/register" /><a name="2.1"></a>
-In order to try out API calls, such as a reading a record and adding information to it, you will also  need to create a test ORCID record. This can be done through the  user interface, much like in the live ORCID registry.
-
-  *Open a web browser and navigate to <a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/signin</a><br />&nbsp;
-  *Click **Register for an ORCID iD**.<br />&nbsp;
-  *Complete the form with a name, email, and password. You will need to remember this information for future steps.
-**<em>IMPORTANT! </em>**<em>Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (use any prefix, e.g. sgarcia@mailinator.com).</em>
-  *Click the **I consent…** checkbox and click **Register**.<br />&nbsp;
-  *After completing the registration process, you will be  taken to your new testing ORCID record. Make note of the 16-digit ORCID iD for this record – you will need this in order to make API calls later during the workshop.<br />
-    <img src="http://alainna.org/orcid/clip_image004.jpg" alt="Screen Shot: Top section of the my-orcid page, showing the ORCID iD in the left column under the name at https://sandbox.orcid.org/my-orcid" width="645" height="107" border="0" /><br />&nbsp;
-
-
-##Explore the ORCID record
-In this section we will learn about the parts of an ORCID record, and explore ORCID's provenance model.
-
-  *Using the interface, add a sentence or two to serve as the biography for your test record. The biography section is located at the top of the right column, and the edit button is the pencil icon in the upper right corner of this section, next to the visibility selector.<br />&nbsp;
-  *In the **Employment** section, click **Add employment** > **Add manually** to add employment information.<br />&nbsp;
-  *After saving your employment information, notice the information on the bottom of the "card" you just created. There is a Source field (that matches your name because you added this information) and the date that you created this addition to your record. This provenance information is recorded for all infomration added to an ORCID record.<br />&nbsp;
-  *In the main menu at the top of the screen, click on the **Account settings** link to display your account preferences. Notice each section to see what iD holders can control with their ORCID accounts.<br />&nbsp;
-  *In the main menu at the top of the screen, click on the **Developer tools** link. In this section a user may obtain credentials to access the public API. Note that this API is different from the member API that we will be discussing today.
-
-
-##Connect your new iD with your IdP
-Since there are over 2.5 million ORCID iDs, many people already have an ORCID iD when they link to their IdP. To experience this proces, we will sign out of your test record and start from the prospective of someone who has an iD, and notices that they can sign in with IdP credentials.
-
-  *Sign out of the ORCID record you just created by clicking the **Sign out** button in the upper right corner. <em>Alternatively, you can navigate to the URL: <a href="https://sandbox.orcid.org/signout" target="_blank">https://sandbox.orcid.org/signout</a>.</em><br />&nbsp;
-  *On the Sign in page (<a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/signin</a>), choose **Sign in using your Institutional Account** to see the list of supported eduGAIN institutions.<br />&nbsp;
-  *Enter your organization's name in the box, or choose to pick it from the list. If you do not have credentials at an eduGAIN-included institution, you may use **United ID** for this example. <em>(you will need 2-factor authentication to use United ID.)</em><br />&nbsp;
-  *After signing into your institution, you will be asked to finish linking the accounts by providing your ORICD sign in credentials. Type in the email address / ORCID iD and Password that you created in the previous step. Click **Sign into ORCID** to finish linking your accounts.<br />&nbsp;
-  *On the my-orcid page that appears, notice an orange alert box confirming that the accounts are linked, and suggesting that you connect to the university's account. This is an example, of the cross linking that we will be exploring further today. We will ignore this message for now.
-
-#ABOUT THE ORCID APIs
-##ORCID API types &amp; features
-ORCID offers several APIs (Application Programming Interfaces) that allow your systems to connect to the  ORCID registry, including reading from and writing to ORCID records. Some API  functions are freely available to anyone; others are available to organizations  that financially support ORCID with an annual membership subscription.
+#0. WELCOME
+##0.1 About the ORCID APIs
+ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).
 
 | API&nbsp;Version   | Access | Features |
 | -------------- | ------ | --- |
 **Public&nbsp;API** | Freely available to anyone | **Authenticate:** Obtain a user&rsquo;s authenticated ORCID iD<br> **Read (Public):** Search/retrieve public data<br> **Create:** Create new ORCID records on demand
 **Member&nbsp;API** | Available to organizations that support ORCID with an annual membership subscription<br>*(Sandbox Member API freely available to all for testing)* | All Public API features, plus:<br> **Read (Limited):** Search/retrieve public data<br> **Update:** Post new items to a record (affiliations, works, etc.) or edit items that you added previously
 
-##Sandbox test environment
-In addition to the  production Registry and APIs, ORCID also offers a testing environment, the ORCID Sandbox, which we will be using for this boot camp. The Sandbox is open  to all users and provides a place to develop and test applications without affecting data in the live ORCID registry.
- The Sandbox includes:
-
-* <a href="https://sandbox.orcid.org/signin" target="_blank">Sandbox Registry</a>: Simulates the ORCID Registry <br />&nbsp;
-* <a href="https://members.orcid.org/api/introduction-orcid-member-api">Sandbox Member API</a>: Simulates the Member API<br />&nbsp;
-* <a href="https://members.orcid.org/api/introduction-orcid-public-api">Sandbox Public API</a>: Simulates the Public API
-
-The sandbox behaves the same  way as the production ORCID Registry with a few exceptions: 
-
-* Search &amp; Link tools do not function.<br />&nbsp;
-* To avoid unintentional spamming, the Sandbox sends  emails only to @mailinator.com addresses. <a href="https://mailinator.com/" target="_blank">Mailinator.com</a> is an inbox testing service  that is free and requires no registration. To receive emails from the Sandbox,  use an @mailinator.com email address when creating Sandbox record(s).<br />&nbsp;
-* Links in the top menu bar (For Researchers, For  Organizations, About, etc.) do not function.
-
-##ORCID  API technologies
 All of the ORCID APIs are  based on the same set of technologies:
 
-* **REST:** ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.<br />&nbsp;
-* **OAuth:** ORCID  APIs use the OAuth 2.0 authentication protocol in order to grant client  applications access to users&rsquo; ORCID records.<br />&nbsp;
+* **REST:** ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.
+* **OAuth:** ORCID  APIs use the OAuth 2.0 authentication protocol in order to grant client  applications access to users&rsquo; ORCID records.
 * **XML/JSON:** ORCID APIs support data exchange in either XML or JSON format.
 
-##ORCID  API Tools
-In order to use the ORCID  APIs you will need the following software tools:
+##0.2 Pre-requisites
+To complete this tutorial, you'll need the following tools:
 
 * **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
 * **Internet connection**
 * **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
 * **Software capable of making HTTP requests:**
-    - cURL: free, command-line application available for Mac  or Windows at <a href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> (pre-installed on most Mac OS versions; accessible within Terminal application)<br />&nbsp;
-    - Online tools, e.g. <a href="http://hurl.it">hurl.it</a> or <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a><br />&nbsp;
-    - Your own web application, in a language such as Java,  Ruby, Python, PHP, etc.
+    - cURL: Free, command-line application available for Mac  or Windows at <a href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> (pre-installed on most Mac OS versions; accessible within Terminal application)
+    - Online tools, like [Google OAuth Playground](https://developers.google.com/oauthplayground/) or [hurl.it](http://hurl.it">hurl.it)
 
-For this workshop, we will be using <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a>.
+Examples in this doc use [Google OAuth Playground](https://developers.google.com/oauthplayground/)
+
+#1. THE SANDBOX
+For this workshop, we'll use ORCID's test environment, the [ORCID Sandbox](https://sandbox.orcid.org/signin). The Sandbox works just like the production ORCID Registry, with a few exceptions:
+
+* Sandbox only sends emails to [mailinator.com](https://www.mailinator.com/) addresses 
+* Import wizard tools don't work in the Sandbox
+* Menu links to informational content (For Researchers, For Organizations, About, Help, etc) don't work in the Sandbox
+* Sandbox doesn't contain production data
+
+##1.1 Create a Sandbox ORCID record
+To get started, you'll need to register an ORCID iD in the Sandbox.
+
+1. In a new window or tab, visit <a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/register</a>
+3. Complete the form with a name, email, and password.<br>
+_**IMPORTANT!** Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (ex: sgarcia@mailinator.com)._<br>
+<img src="images/01-1_register.png" width="600" alt="ORCID Sandbox registration form" />
+4. Click the **I consent…** checkbox and click **Register**.<br>
+*Remember the email and password - you'll need these throughout the rest of the tutorial!*
+
+##1.2 Verify your email address
+Before you can edit information on your ORCID record, you'll need to verify your email address.
+
+1. In a new window or tab, visit [https://www.mailinator.com](https://www.mailinator.com/)
+2. Enter the @mailinator.com address you used to register your Sandbox account and click **Go**.<br>
+<img src="images/01-2_mailinator.png" width="600" alt="mailinator.com home page" />
+3. Open the message with the subject **[ORCID] Reminder to verify your email address** and click the **Verify your email address** button.<br>
+<img src="images/01-2_verify.png" width="600" alt="ORCID email verification message" />
+4. Log into ORCID, if prompted, to finish verifying your email. Since you've just registered, you are likely already logged in and will not be prompted to log in again.
+5. After verifying your email, you'll be redirected to your Sandbox record<br>
+*Make note of the 16-digit iD for your Sandbox record - you'll need this throughout the rest of the tutorial!*<br>
+<img src="images/01-2_new-record.png" width="600" alt="New ORCID Sandbox record" />
+
+##1.3 Add info to your Sandbox record
+1. **Add a country:** Click the pencil icon beside Country, choose a country and click **Save changes**.<br>
+<img src="images/01-3_edit-country.png" width="400" alt="ORCID edit country screen" />
+2. **Add employment:** In the **Employment** section, click **Add employment** > **Add manually**, fill out the form and click **Add to list**.<br>
+<img src="images/01-3_add-employment.png" width="600" alt="ORCID add employment screen" />
+3. Take a look at your employment entry and notice the following fields, which are included with each item on an ORCID record: 
+    - **Source:** Person or organization that added the item
+    - **Created:** Date the item was added
+    - **Privacy:** [Visibility setting](https://support.orcid.org/knowledgebase/articles/124518-orcid-visibility-settings) for the item
+<img src="images/01-3_employment-item.png" width="600" alt="ORCID employment entry" />
+  
+#2. READ PUBLIC INFO
+In this section, we'll use the Public API to take a look at the underlying data for our Sandbox record. 
+
+##2.1 Read a record summary
+1. In a new window or tab, visit [https://developers.google.com/oauthplayground](https://developers.google.com/oauthplayground)
+2. On the left side of the screen, click **Step 3 Configure request to API**
+3. In the **Request URI** field enter:<br>
+```https://pub.sandbox.orcid.org/v2.0/[ORCID ID]/record```<br>
+*Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX*<br>
+<img src="images/02-1_request-record.png" width="400" alt="Google OAuth Playground request for ORCID record summary" />
+4. Click **Send the request**
+5. A summary version of your record in XML format will appear in the **Request/Response** section<br>
+<img src="images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" />
+
+##2.2 Read activity details
+To get more information about a specific item on an ORCID record, you can retrieve that individual item using its put-code.
+
+1. In the record summary XML, find the **activities-summary** section, then find the **put-code** for the employment item that you added in the previous section.<br>
+<img src="images/02-2_put-code.png" width="600" alt="XML showing put-code for an employment item on an ORCID record" />
+3. In the **Request URI** field enter:<br>
+```https://pub.sandbox.orcid.org/v2.0/[ORCID ID]/employment/[PUT CODE]```<br>
+*Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX and [PUT CODE] with the put-code for your employment item*<br>
+<img src="images/02-2_request-employment.png" width="400" alt="Google OAuth Playground request for an employment item on an ORCID record" />
+4. Click **Send the request**
+5. Fulls details of your employment entry will appear in the **Request/Response** section<br>
+<img src="images/02-2_response-employment.png" width="600" alt="Google OAuth Playground response an employment item on an ORCID record" />
+
+#3. SEARCH PUBLIC INFO
+In addition to reading information on a specific ORCID record, you can use the API to search for ORCID records that contain specific information.
+
+In this section, we'll try searches using just a few of the available fields. For a full list of fields that you can search, see our [Basic tutorial: Searching Data using the ORCID API](https://members.orcid.org/api/tutorial/search-orcid-registry)
+
+##3.1 Search for records with an institutional affiliation
+1. In a new window or tab, visit [https://developers.google.com/oauthplayground](https://developers.google.com/oauthplayground)
+2. On the left side of the screen, click **Step 3 Configure request to API**
+3. In the **Request URI** field enter:<br>
+```https://pub.sandbox.orcid.org/v2.0/search/?q=affiliation-org-name:%22Boston%20University%22```<br>
+*Optional: <br>
+<img src="images/02-1_request-record.png" width="400" alt="Google OAuth Playground request for ORCID record summary" />
+4. Click **Send the request**
+5. The total number of matching ORCID iDs and a list of those iDs will appear **Request/Response** section<br>
+<img src="images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" />
+
+##3.2 Paging through search results
+If your search matches more than 100 ORCID iDs, only the first 100 iDs will be returned in the list of results. To get the next set of results, you'll need to make another API request.
+
+1. On the left side of the screen, click **Step 3 Configure request to API**
+2. In the **Request URI** field enter:<br>
+```https://pub.sandbox.orcid.org/v2.0/search/?q=affiliation-org-name:%22Boston%20University%22&start=101&rows=200```<br>
+3. Click **Send the request**
+4. The total number of matching ORCID iDs and a list of iDs 101-301 will appear in the **Request/Response** section<br>
+<img src="images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" />
+
+To get the entire set of results, repeat the query in step 2, changing ```start=``` until you've reached collected all of your results.
 
 
+#4. GET AUTHENTICATED iDs & PERMISSION
+In our first few API requests, we already knew which ORCID iD to use (our own!) and we read/serached public information, which didn't require any permission from the user. In practice, you'll need to gather up iDs for researchers whose ORCID records you want to read, update, or associate with records in your own system AND get permission to take certain actions, like adding information to their ORCID records.
 
-#OAuth BASICS
-As discussed in [section 3.1](#3.1), the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously added. To do these actions, one must obtain permission from the user/data subject. This section describes the standard OAuth process for requesting this permission.
-<h2><a name="4.1"></a>4.1  Accessing the Sandbox Member API</h2>
-Client credentials consisting of a client ID and a client secret are needed in order to access the Member API. Client Credentials for the Member APIs are issued by ORCID. For this workshop, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Member API Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a> for experimintation and testing that you do outside of this workshop.
+**Authenticated iDs**
 
-##Setting up the OAuth Playground
-We&rsquo;ll use the Google Developers&rsquo; OAuth Playground for the next exercises. To get started, we will need to configure the environment to work with the ORCID Member API.
+ORCID is all about identifying who's who, so it's important that you get the correct iD for each researcher. The best way to do this is to collect **Authenticated ORCID iDs**, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. [Learn more about Authenticated iDs](https://orcid.org/blog/2017/02/20/whats-so-special-about-signing)
 
-*Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; 
-*Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; 
-<img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth plaground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" />
-*Enter the following:
-<table border="1" cellspacing="0" cellpadding="0">
-<tr>
-  <td width="158" valign="top">**OAuth flow**</td>
-  <td valign="top">Server-side</td>
-  <td width="275" rowspan="7"><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" /></td>
-</tr>
-<tr>
-  <td valign="top">**OAuth endpoints**</td>
-  <td valign="top">Custom</td>
-</tr>
-<tr>
-  <td valign="top">**Authorization endpoint**</td>
-  <td valign="top">https://qa.orcid.org/oauth/authorize</td>
-</tr>
-<tr>
-  <td valign="top">**Token endpoint**</td>
-  <td valign="top">https://qa.orcid.org/oauth/token</td>
-</tr>
-<tr>
-  <td valign="top">**Access token location**</td>
-  <td valign="top">Authorization header    w/Bearer prefix</td>
-</tr>
-<tr>
-  <td width="158" valign="top">**OAuth Client ID**</td>
-  <td valign="top">Your Member API client ID (ex: APP-E422WM33OPZWKKMQ)</td>
-</tr>
-<tr>
-  <td width="158" valign="top">**OAuth Client Secret**</td>
-  <td valign="top">Your Member API client secret (ex: ae857cfb-446b-4c3f-8a09-55436bf602dc)</td>
-</tr>
-</table>
-*The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click **Close** in the lower left corner of the configuration screen.
+**Record access permission**
 
-##Getting permission (an Access Token) to access ORCID records
-To access an ORCID record via the Member API, you first need to get permission from the owner of the record in the form of an Access Token. ORCID uses the standard protocol, OAuth 2.0, to obtain this permission. Generally there are two steps:
+Control over access to data in your ORCID record is one of [ORCID's core princples](https://orcid.org/about/what-is-orcid/principles). While you can read public ORCID data without the record owner's involvement, some API actions require permission:
 
-*Get an **Authorization Code**.<br />&nbsp; 
-*Exchange the Authorization Code for an **Access Token**.<br />&nbsp;
+* Get an Authenticated ORCID iD
+* Read non-public data (items with privacy set to 'Trusted parties')
+* Add/update record data
+
+##4.1 The old-fashioned way
+
+**OAuth 2.0** 
+
+Getting an Authenticated iD and record access permission from a user involves following [OAuth 2.0](https://oauth.net/2/), an industry-standard protocol for authorization. OAuth allows a user to give a website or application access to account information stored on another site, without giving that site their password. 
+
+If you've ever signed into a site using Google or Facebook instead of your credentials for that particular site, you've already used OAuth!
+
+**The OAuth process includes 3 steps:**
+
+1. Create an authorization URL
+1. Get an authorization code
+2. Exchange the authorization code for an access token
+
+###4.1.1 Get API credentials
+###4.1.2 Create an authorization URL
+To kick off the OAuth process, we'll need to create an special authorization URL that sends users to an ORCID sign-in screen. This URL consists of **Authorization endpoint**, plus **Parameters** that identify your organization and the permissions you want to request.
+
+**Authorization endpoint (Sandbox)**
+
+```https://sandbox.orcid.org/oauth/authorize```
 
 
-###Get an Authorization Code
+**Parameters**
 
-<img src="http://alainna.org/orcid/clip_image033.jpg" alt="Screen shot: Google OAuth Playground, Step 1 - adding the scope variable, and clicking the 'Authorize API' button." width="288" height="177" align="right" hspace="12" vspace="12" />
-To get an Authorization  Code, you&rsquo;ll need to prompt the user to sign into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however, this step is done by configuring some additional settings and clicking a button.
+| Parameter | Description | Example |
+| ----------| ----------- | ------- |
+|**client_id**| Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application) | ```APP-XA6KUTFCVQL0622C``` |
+|**response_type**|  | ```code``` |
+|**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes). | ```/authorize``` <br> ```/activities/update```
+|**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
-*Beneath **Step 1: Select &amp; authorize APIs** on the left side of the Google OAuth Playground screen, type **/activities/update** in the text box (do not select any of the options presented in the box above).<br />&nbsp;
-*Click the **Authorize APIs** button.<br />&nbsp; 
-*<img src="http://alainna.org/orcid/clip_image035.gif" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - the code is pre-filled after the previous step." width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth permission screen will appear. If you are already signed into your test Sandbox account, click the **Authorize** button to grant permission. If you are not yet signed in, type in your test account sign in credentials, and click **Sign In** and sign into your Sandbox account and grant the permissions.<br />&nbsp; 
-*Click **Authorize** on the ORCID OAuth login screen and you will be sent back to the OAuth Playground. A 6-character code will appear in the **Authorization Code **field.<br />&nbsp; 
+To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this workshop, our authorization URL will be:
+
+```
+https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground
+```
+
+###4.1.3 Get an authorization Code
+
+1. In a new window or tab, visit<br>
+[https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground)
+
+2. An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click **Authorize**<br>
+<img src="images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" />
+3. After granting permission, you'll be redirected to the Google OAuth Playground. A 6-character code will appear at the end of the redirect URI in the browser address bar (and under the **Step 2** section at left)<br>
+<img src="images/04-2_auth-code-address.png" width="400" alt="ORCID OAuth sign-in screen" /><br><br>
+<img src="images/04-2_auth-code.png" width="400" alt="ORCID OAuth sign-in screen" />
+
+###4.1.4 Exchange authorization code for access token & authenticated iD
+Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. 
+
+In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this workshop, we'll use Google OAuth Playground to simulate a web application.
+
+1. Click the gear icon in the upper right corner to open the **OAuth 2.0 Configuration**<br>
+<img src="images/04-3_google-playground-config.png" width="400" alt="Google OAuth Playground OAuth 2.0 Configuration" />
+2. Enter the following settings and click **Close**
+
+| Field | Value |
+| ------| ------|
+|**OAuth flow**| Server-side |
+|**OAuth endpoints**| Custom |
+|**Authorization endpoint**| ```https://sandbox.orcid.org/oauth/authorize``` |
+|**Token endpoint**| ```https://sandbox.orcid.org/oauth/token``` |
+|**Access token location**| Authorization header w/Bearer prefix |
+|**OAuth Client ID**| ```APP-XA6KUTFCVQL0622C```<br>(Demo client ID created for this workshop) |
+|**OAuth Client Secret**| ```7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c```<br>(Demo client secret created for this workshop - do not share API client secrets!) |
+
+3. In the **Step 2 Exchange authorization code for tokens** section at left, click **Exchange authorization code for tokens**<br>
+<img src="images/04-3_exchange-code.png" width="400" alt="Google OAuth Playground exchanging authorization code for access token" />
+4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
+<img src="images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" />
+
+##4.2 Institutional sign-in
+
+ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently [SURFconext](https://www.surf.nl/en/services-and-products/surfconext/index.html) and [eduGAIN](https://technical.edugain.org/status.php).
+
+ORCID membership is not required in order for instituional sign-in to work for your researchers, however, ORCID members who are [SURFconext](https://www.surf.nl/en/services-and-products/surfconext/index.html) or [eduGAIN](https://technical.edugain.org/status.php) federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect & Connect feature.
+
+In this section, we'll take a look at this feature.
+
+###4.2.1 Get API credentials
+
+###4.2.2 (User) Connect your institutional account
 
 
-###Exchange the Authorization Code for an Access Token
-Once you have an  Authorization Code, you can exchange it for an Access Token, which allows you  to read from/write to a user&rsquo;s ORCID record. In a real-world situation, this  exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. With the OAuth Playground, however, this step is  done by clicking a button.
+**Not a member of a supported federation?** Test out ORCID institutional sign-in with a [United ID](https://app.unitedid.org/signup) account. United ID is a free and independent online identity service *(Note: United ID requires use of a 2-Factor Authentication method, like [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en))*.
 
-*<img src="http://alainna.org/orcid/clip_image036.gif" alt="" width="336" height="111" align="right" hspace="12" vspace="12" />Beneath the **Authorization Code** field, click **Exchange authorization code for tokens**. <br />&nbsp; 
-*The token will appear in the **Access Token **field.<br />&nbsp; 
-*Note that you are provided with additional information  in the **Request/Response **section on  the right side of the screen, such as the name and ORCID iD of the user who  granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.
-<img src="http://alainna.org/orcid/clip_image038.jpg" alt="" width="340" height="103" border="0" />
+  1. Sign out of your Sandbox record - click the **Sign out** button in the upper right corner or visit [https://sandbox.orcid.org/signout](https://sandbox.orcid.org/signout)
+  2. Visit [https://sandbox.orcid.org/signin](https://sandbox.orcid.org/signin) and click **Sign in using your Institutional Account**
+  3. Enter your organization's name in the box, or choose to pick it from the list. 
+  <img src="images/signin-inst-account.png" width="600">
+  4. Sign into your institution account<br>
+  <img src="images/united-id-login.png" width="400">
+  5. Finish linking your accounts by signing into ORCID with your ORCID username and password. Enter the email address / ORCID iD and password for your Sandbox account and click **Sign into ORCID**. *You will only need to complete this step once - in the future you can log directly into ORCID with your institutional account.*<br>
+  <img src="images/link-account.png" width="600">
+###4.2.3 Exchange authorization code for access token & authenticated iD
 
+##4.3 Share my iD
+  
+#6. CONNECT: ADD & UPDATE INFO
 
-#API Credential Setup
-To get started setting up the institutional signin in cross-link process described in the previous section, you'll need to:
+Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.
 
-1. Get ORCID Member API credentials** (Not a member? You can use the [ORCID Public API](https://members.orcid.org/api/introduction-orcid-public-api) to get users' ORCID iDs, but you won't be able to update their ORCID records)
+##6.1 Add an affiliation
 
-2. Configure identity provider settings for your API credentials
-
-##Get ORCID Member API Credentials
-
-To use the ORCID Member API, you'll need credentials consisting of a Client ID (consumer KEY) and Client Secret (consumer SECRET). These work like a username and password that allow your application to access the API.
-
-We require that all new Member API applications be built and tested using our [Developer Sandbox](https://sandbox.orcid.org/signin), which mirrors production environment behavior, but does not contain production data. [Learn more about the Developer Sandbox](http://support.orcid.org/knowledgebase/articles/166623-is-the-sandbox-different-from-the-production-regis)
-
-To get Sandbox API credentials, use the form at: 
-
-**[Request ORCID API credentials](https://orcid.org/content/register-client-application-0)**
-
-
-##Configure identity provider settings
-
-At the moment, the process for adding identify provider settings to your API credentials is not automated. 
-
-Instead, please send a request to [support@orcid.org](mailto:support@orcid.org) with the following information:
-
-- Client Id
-- Your identity provider entity ID (looks similar to https://idp.example.org/idp/shibboleth)
-- Redirect URL the page on your site that users should be directed to after they complete the cross link process (this can be a different redirect URL than you use for other ORCID API applications)
-
-*For new API credential requests, you can also include this info in the notes section of the request form.*
-
-#Post an affiliation
-
-1. Beneath **Step 3: Configure request to API**, set **HTTP Method** to **POST**.
-2. Click **Add headers** and enter the following values:
-      - **Header name:** accept
-      - **Header value:** application/vnd.orcid+xml
-<img src="http://alainna.org/orcid/clip_image040.jpg" alt="" width="464" height="119" border="0" />
-3. Click **Add** to add another header and enter the following values:
-    - **Header name:** Content-type
-    - **Header value:** application/vnd.orcid+xml
-
-4. Click **Add** again, then click **Close**.
-5. In the **Request  URI** field, enter https://api.sandbox.orcid.org/v1.2/[orcid-id]/affiliation,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-3791-8427/affiliation)
-<img src="http://alainna.org/orcid/clip_image042.jpg" alt="" width="392" height="232" border="0" />
-6. Click **Enter request body**. Here is where you&rsquo;ll enter the XML for the works you wish to  add.
-7. Visit <a href="https://git.io/vibkI" target="_blank">https://git.io/vibkI</a> and copy the XML in the **Sample Affiliation** section. 
-8. Paste the copied content into the **Request Body** text box
-9. Edit the text to reflect your institution. For the disambiguated-organization-identifier, replace XXXXXX with the Ringgold identifier for your institution listed **Ringgold List**
+1. Beneath **Step 3: Configure request to API**, set **HTTP Method** to **POST**.<br>
+<img src="images/06-1_http-method-post.png" width="400" alt="Google OAuth Playground HTTP method set to POST" />
+2. Click **Add headers**, enter the values below, then click **Add** and **Close**
+    - **Header name:** ```accept```
+    - **Header value:** ```application/vnd.orcid+xml```
+<br>
+<img src="images/06-1_header-accept.png" width="400" alt="Google OAuth Playground adding accept header" />
+5. In the **Request URI** field enter:<br>
+```https://api.sandbox.orcid.org/v2.0/[ORCID ID]/education```<br>
+*Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX*<br>
+<img src="images/06-1_request-uri.png" width="400" alt="Google OAuth Playground request URI configuration for adding an education affiliation" />
+3. Click **Content-type** > **Custom** and enter ```application/vnd.orcid+xml```<br>
+<img src="images/06-1_headers.png" width="400" alt="Google OAuth Playground Content-type header configuration" />
+4. Click **Add**, then click **Close**.
+6. Click **Enter request body**.
+7. Copy the education affiliation XML at the end of this section and paste it into the **Request Body** text box<br>
+<img src="images/06-1_request-body.png" width="600" alt="Google OAuth Playground Request Body configuration for new education affiliation" />
+9. **OPTIONAL:** In the **Request Body** text box, edit the XML to reflect your institution.<br>
+*For ```<disambiguated-organization-identifier>```, use the [Ringgold Identify database](http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=1) to find the Ringgold ID for your institution (you'll need to [register a free Ringgold account](http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=24) in order to search the database).*
 10. Click **Close**.
-<img src="http://alainna.org/orcid/clip_image044.jpg" alt="" width="498" height="275" border="0" />
 11. Click **Send the  request**.
-12. The  results will appear in the **Request/Response** section on the right side of the screen. Scroll to the bottom – if you see **HTTP/1.1 201 Created**, the work was  successfully posted!
-<img src="http://alainna.org/orcid/clip_image046.jpg" alt="" width="483" height="224" border="0" />
-13. Visit the **public  view **of your Sandbox record at http://sandbox.orcid.org/[Your sandbox iD]  to see the work that you added in the user interface.
+12. The  results will appear in the **Request/Response** section at right. Scroll to the bottom – if you see **HTTP/1.1 201 Created**, your education affiliation was successfully added!<br>
+<img src="images/06-1_post-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation POST request" />
+13. Visit the public view of your Sandbox record at ```http://sandbox.orcid.org/[ORCID ID]``` to see your new education affiliation.<br>
+<img src="images/06-1_new-affiliation.png" width="600" alt="ORCID record with new education affiliation item added" /><br>
+*Notice that **Source** shows the name of the API client that added the affiliation - this is a key element that helps other systems consuming ORCID data determine whether this piece of information is authoritative.**
 
-##Update an affiliation
+###Education affiliation XML
 
-In a real-world situation, you may need to update a researcher's affiliation.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<education:education
+  xmlns:common="http://www.orcid.org/ns/common" xmlns:education="http://www.orcid.org/ns/education"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.orcid.org/ns/education ../education-2.0.xsd "> 
+  <education:department-name>Department</education:department-name>
+  <education:role-title>Degree title</education:role-title>
+  <common:start-date>
+    <common:year>2012</common:year>
+    <common:month>01</common:month>
+    <common:day>01</common:day>
+  </common:start-date>
+  <education:organization>
+    <common:name>My University</common:name>
+    <common:address>
+      <common:city>Some City</common:city>
+      <common:region>Region</common:region>
+      <common:country>US</common:country>
+    </common:address>
+    <common:disambiguated-organization>
+      <common:disambiguated-organization-identifier>XXXXXX</common:disambiguated-organization-identifier>
+      <common:disambiguation-source>RINGGOLD</common:disambiguation-source>
+    </common:disambiguated-organization>
+  </education:organization>     
+</education:education>
+```
+#7. SYNCHRONIZE: Update info
 
-1. Click **Enter request body**. This is where you&rsquo;ll  enter the XML for the work that you wish to edit.
-2. Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the **Sample Affiliation Updated** section. *(Tip: The amended area are lines 14-18, beginning with &lt;end-date&gt;. You can paste it after the &lt;/start-date&gt; in the active Request Body.)*
-3. Paste the copied content into the **Request Body** field and amend to reflect your institution.
-4. Click **Close**.
-5. Click **Send the Request**.
-6. The  results will appear in the **Request/Response** section on the right side of the screen. If the full XML of the user&rsquo;s  record appears, the work was successfully updated! If you receive an error, be sure to check that the headers value under **Add headers** have not been changed to garbled text, e.g. "application%2Fvnd.orcid%2Bxml". 
-7. Visit  the public view of your Sandbox record at http://sandbox.orcid.org/[Your  sandbox iD] to see the changes to the work in the user interface.
+##7.1 Update an Affiliation
+In a real-world situation, you may need to update a researcher's affiliation. In this section, we'll update our education affiliation to include an end date.
 
-#Reference
+1. In the **Request/Response** section at right, find the **put-code** for the education affiliation that you added in the previous section.<br>
+<img src="images/06-2_put-code.png" width="600" alt="Detailed view of Google OAuth Playground response for successful education affiliation POST request showing put-code" />
+2. Change **HTTP Method** to **PUT**<br>
+<img src="images/06-2_http-method-put.png" width="400" alt="Google OAuth Playground HTTP method set to PUT" />
+3. Click **Add Headers** and make sure that ```accept``` and ```Content-type``` are both set to ```application/vnd.orcid+xml```<br>
+<img src="images/06-2_put-headers.png" width="400" alt="Google OAuth Playground accept and Content-type header configuration" />
+3. In the **Request URI** field enter:<br>
+```https://api.sandbox.orcid.org/v2.0/[ORCID ID]/education/[PUT CODE]```<br>
+*Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX and [PUT CODE] with the put-code for your education affiliation*<br>
+<img src="images/06-2_request-uri.png" width="400" alt="Google OAuth Playground request URI configuration for updating an education affiliation" />
+2. Click **Enter request body** (the XML for the affiliation you added in the previous step should appear).
+3. Inside the ```<education:education``` tag, add ```put-code=[PUT CODE]```<br>
+*Replace [PUT CODE] with the put-code for your education affiliation, ex ```<education:education put-code="26971"```*<br>
+<img src="images/06-2_request-body-1.png" width="600" alt="Google OAuth Playground Request Body configuration for updating an education affiliation showing where to place put-code" />
+4. Copy the affiliation end date XML at the end of this section and paste it beneath the ```</common:start-date>``` tag (and above the ```<education:organization>``` tag)<br>
+<img src="images/06-2_request-body-2.png" width="600" alt="Google OAuth Playground Request Body configuration for updating an education affiliation showing where to place end-date XML" />
+5. Click **Close**.
+6. Click **Send the Request**.
+7. The  results will appear in the **Request/Response** section at right. Scroll to the bottom – if you see **HTTP/1.1 200 OK**, your education affiliation was successfully updated! If you see an error message, check that the header values in **Add headers** have not been changed to garbled text, ex: ```application%2Fvnd.orcid%2Bxml"```<br>
+<img src="images/06-2_put-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation PUT request" />
+8. Visit the **public  view** of your Sandbox record at ```http://sandbox.orcid.org/[ORCID ID]``` to see your updated education affiliation.<br>
+<img src="images/06-2_updated-affiliation.png" width="600" alt="ORCID record with updated education affiliation item" /><br>
 
-* See example implementations and workflow guides <a href="https://members.orcid.org" target="_blank">https://members.orcid.org</a><br />&nbsp;
-* Read technical documentation <a href="https://members.orcid.org/api" target="_blank">https://members.orcid.org/api</a><br />&nbsp;
-* Join the ORCID API Users Group <a href="https://groups.google.com/group/orcid-api-users" target="_parent">https://groups.google.com/group/orcid-api-users</a><br />&nbsp;
-* Sign up for a Technical Webinar <a href="https://members.orcid.org/event-list">https://members.orcid.org/event-list</a><br />&nbsp;
-* Email ORCID Support <a href="mailto:support@orcid.org">support@orcid.org</a>
+###Affiliation end date XML
+
+```
+<common:end-date>
+  <common:year>2017</common:year>
+  <common:month>01</common:month>
+  <common:day>31</common:day>
+</common:end-date>
+```
+
+#8. DISPLAY: Presenting ORCID in your system
+
 
