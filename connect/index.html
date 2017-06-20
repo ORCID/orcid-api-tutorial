@@ -15,7 +15,7 @@
     
     
       
-        <title>3. Search public info - Hands-on with the ORCID API</title>
+        <title>5. CONNECT&#58; Add an affiliation - Hands-on with the ORCID API</title>
       
     
     
@@ -24,14 +24,16 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application-acc56dad49.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-8817cfa535.palette.css">
+      
     
     
       
         
         
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
@@ -44,7 +46,7 @@
   
   
   
-    <body>
+    <body data-md-color-primary="grey" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -61,7 +63,8 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href=".." title="Hands-on with the ORCID API" class="md-icon md-icon--home md-header-nav__button">
+          <a href=".." title="Hands-on with the ORCID API" class="md-logo md-header-nav__button">
+            <img src="../images/id-icon.svg" width="24" height="24">
           </a>
         
       </div>
@@ -74,7 +77,7 @@
             
               
             
-            3. Search public info
+            5. CONNECT&#58; Add an affiliation
           
         </span>
       </div>
@@ -122,7 +125,9 @@
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
-      <i class="md-icon md-icon--home md-nav__button"></i>
+      <i class="md-logo md-nav__button">
+        <img src="../images/id-icon.svg">
+      </i>
     
     Hands-on with the ORCID API
   </label>
@@ -159,8 +164,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../read-public/" title="2. Read public info" class="md-nav__link">
+    <a href="../read/" title="2. Read public info" class="md-nav__link">
       2. Read public info
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../search/" title="3. Search public info" class="md-nav__link">
+      3. Search public info
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../collect/" title="4. COLLECT&#58; Get authenticated iDs &amp; permission" class="md-nav__link">
+      4. COLLECT&#58; Get authenticated iDs &amp; permission
     </a>
   </li>
 
@@ -176,37 +205,33 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        3. Search public info
+        5. CONNECT&#58; Add an affiliation
       </label>
     
-    <a href="./" title="3. Search public info" class="md-nav__link md-nav__link--active">
-      3. Search public info
+    <a href="./" title="5. CONNECT&#58; Add an affiliation" class="md-nav__link md-nav__link--active">
+      5. CONNECT&#58; Add an affiliation
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-search-for-records-with-an-institutional-affiliation" title="3.1 Search for records with an institutional affiliation" class="md-nav__link">
-    3.1 Search for records with an institutional affiliation
+  <a href="#51-add-an-education-affiliation" title="5.1 Add an education affiliation" class="md-nav__link">
+    5.1 Add an education affiliation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#32-paging-through-search-results" title="3.2 Paging through search results" class="md-nav__link">
-    3.2 Paging through search results
+  <a href="#52-education-affiliation-xml" title="5.2 Education affiliation XML" class="md-nav__link">
+    5.2 Education affiliation XML
   </a>
   
 </li>
@@ -226,31 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../permission/" title="4. COLLECT&#58; authenticated iDs &amp; permission" class="md-nav__link">
-      4. COLLECT&#58; authenticated iDs &amp; permission
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../add-info/" title="5. CONNECT&#58; Add an affiliation" class="md-nav__link">
-      5. CONNECT&#58; Add an affiliation
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../update-info/" title="6. SYNCHRONIZE&#58; Update an affiliation" class="md-nav__link">
+    <a href="../sync/" title="6. SYNCHRONIZE&#58; Update an affiliation" class="md-nav__link">
       6. SYNCHRONIZE&#58; Update an affiliation
     </a>
   </li>
@@ -294,22 +295,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-search-for-records-with-an-institutional-affiliation" title="3.1 Search for records with an institutional affiliation" class="md-nav__link">
-    3.1 Search for records with an institutional affiliation
+  <a href="#51-add-an-education-affiliation" title="5.1 Add an education affiliation" class="md-nav__link">
+    5.1 Add an education affiliation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#32-paging-through-search-results" title="3.2 Paging through search results" class="md-nav__link">
-    3.2 Paging through search results
+  <a href="#52-education-affiliation-xml" title="5.2 Education affiliation XML" class="md-nav__link">
+    5.2 Education affiliation XML
   </a>
   
 </li>
@@ -329,32 +328,67 @@
               
                 
                 
-                <h1 id="3-search-public-info">3. SEARCH PUBLIC INFO</h1>
-<p>In addition to reading information on a specific ORCID record, you can use the API to search for ORCID records that contain specific information.</p>
-<p>In this section, we'll try searches using just a few of the available fields. For a full list of fields that you can search, see our <a href="https://members.orcid.org/api/tutorial/search-orcid-registry">Basic tutorial: Searching Data using the ORCID API</a></p>
-<h2 id="31-search-for-records-with-an-institutional-affiliation">3.1 Search for records with an institutional affiliation</h2>
+                  <h1>5. CONNECT&#58; Add an affiliation</h1>
+                
+                <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.</p>
+<h2 id="51-add-an-education-affiliation">5.1 Add an education affiliation</h2>
 <ol>
-<li>In a new window or tab, visit <a href="https://developers.google.com/oauthplayground">https://developers.google.com/oauthplayground</a></li>
-<li>On the left side of the screen, click <strong>Step 3 Configure request to API</strong></li>
+<li>Beneath <strong>Step 3: Configure request to API</strong>, set <strong>HTTP Method</strong> to <strong>POST</strong>.<br>
+<img src="../images/06-1_http-method-post.png" width="400" alt="Google OAuth Playground HTTP method set to POST" /></li>
+<li>Click <strong>Add headers</strong>, enter the values below, then click <strong>Add</strong> and <strong>Close</strong><ul>
+<li><strong>Header name:</strong> <code>accept</code></li>
+<li><strong>Header value:</strong> <code>application/vnd.orcid+xml</code>
+<br>
+<img src="../images/06-1_header-accept.png" width="400" alt="Google OAuth Playground adding accept header" /></li>
+</ul>
+</li>
 <li>In the <strong>Request URI</strong> field enter:<br>
-<code>https://pub.sandbox.orcid.org/v2.0/search/?q=affiliation-org-name:%22Boston%20University%22</code><br>
-*Optional: <br>
-<img src="../images/02-1_request-record.png" width="400" alt="Google OAuth Playground request for ORCID record summary" /></li>
-<li>Click <strong>Send the request</strong></li>
-<li>The total number of matching ORCID iDs and a list of those iDs will appear <strong>Request/Response</strong> section<br>
-<img src="../images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" /></li>
+<code>https://api.sandbox.orcid.org/v2.0/[ORCID ID]/education</code><br>
+<em>Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX</em><br>
+<img src="../images/06-1_request-uri.png" width="400" alt="Google OAuth Playground request URI configuration for adding an education affiliation" /></li>
+<li>Click <strong>Content-type</strong> &gt; <strong>Custom</strong> and enter <code>application/vnd.orcid+xml</code><br>
+<img src="../images/06-1_headers.png" width="400" alt="Google OAuth Playground Content-type header configuration" /></li>
+<li>Click <strong>Add</strong>, then click <strong>Close</strong>.</li>
+<li>Click <strong>Enter request body</strong>.</li>
+<li>Copy the education affiliation XML at the end of this section and paste it into the <strong>Request Body</strong> text box<br>
+<img src="../images/06-1_request-body.png" width="600" alt="Google OAuth Playground Request Body configuration for new education affiliation" /></li>
+<li><strong>OPTIONAL:</strong> In the <strong>Request Body</strong> text box, edit the XML to reflect your institution.<br>
+<em>For <code>&lt;disambiguated-organization-identifier&gt;</code>, use the <a href="http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=1">Ringgold Identify database</a> to find the Ringgold ID for your institution (you'll need to <a href="http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=24">register a free Ringgold account</a> in order to search the database).</em></li>
+<li>Click <strong>Close</strong>.</li>
+<li>Click <strong>Send the  request</strong>.</li>
+<li>The  results will appear in the <strong>Request/Response</strong> section at right. Scroll to the bottom – if you see <strong>HTTP/1.1 201 Created</strong>, your education affiliation was successfully added!<br>
+<img src="../images/06-1_post-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation POST request" /></li>
+<li>Visit the public view of your Sandbox record at <code>http://sandbox.orcid.org/[ORCID ID]</code> to see your new education affiliation.<br>
+<img src="../images/06-1_new-affiliation.png" width="600" alt="ORCID record with new education affiliation item added" /><br>
+<em>Notice that <strong>Source</strong> shows the name of the API client that added the affiliation - this is a key element that helps other systems consuming ORCID data determine whether this piece of information is authoritative.</em>*</li>
 </ol>
-<h2 id="32-paging-through-search-results">3.2 Paging through search results</h2>
-<p>If your search matches more than 100 ORCID iDs, only the first 100 iDs will be returned in the list of results. To get the next set of results, you'll need to make another API request.</p>
-<ol>
-<li>On the left side of the screen, click <strong>Step 3 Configure request to API</strong></li>
-<li>In the <strong>Request URI</strong> field enter:<br>
-<code>https://pub.sandbox.orcid.org/v2.0/search/?q=affiliation-org-name:%22Boston%20University%22&amp;start=101&amp;rows=200</code><br></li>
-<li>Click <strong>Send the request</strong></li>
-<li>The total number of matching ORCID iDs and a list of iDs 101-301 will appear in the <strong>Request/Response</strong> section<br>
-<img src="../images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" /></li>
-</ol>
-<p>To get the entire set of results, repeat the query in step 2, changing <code>start=</code> until you've reached collected all of your results.</p>
+<h2 id="52-education-affiliation-xml">5.2 Education affiliation XML</h2>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;education:education
+  xmlns:common=&quot;http://www.orcid.org/ns/common&quot; xmlns:education=&quot;http://www.orcid.org/ns/education&quot;
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://www.orcid.org/ns/education ../education-2.0.xsd &quot;&gt; 
+  &lt;education:department-name&gt;Department&lt;/education:department-name&gt;
+  &lt;education:role-title&gt;Degree title&lt;/education:role-title&gt;
+  &lt;common:start-date&gt;
+    &lt;common:year&gt;2012&lt;/common:year&gt;
+    &lt;common:month&gt;01&lt;/common:month&gt;
+    &lt;common:day&gt;01&lt;/common:day&gt;
+  &lt;/common:start-date&gt;
+  &lt;education:organization&gt;
+    &lt;common:name&gt;My University&lt;/common:name&gt;
+    &lt;common:address&gt;
+      &lt;common:city&gt;Some City&lt;/common:city&gt;
+      &lt;common:region&gt;Region&lt;/common:region&gt;
+      &lt;common:country&gt;US&lt;/common:country&gt;
+    &lt;/common:address&gt;
+    &lt;common:disambiguated-organization&gt;
+      &lt;common:disambiguated-organization-identifier&gt;XXXXXX&lt;/common:disambiguated-organization-identifier&gt;
+      &lt;common:disambiguation-source&gt;RINGGOLD&lt;/common:disambiguation-source&gt;
+    &lt;/common:disambiguated-organization&gt;
+  &lt;/education:organization&gt;     
+&lt;/education:education&gt;
+</code></pre>
                 
                   
                 
@@ -373,7 +407,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../read-public/" title="2. Read public info" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../collect/" title="4. COLLECT&#58; Get authenticated iDs &amp; permission" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -382,19 +416,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2. Read public info
+                4. COLLECT&#58; Get authenticated iDs &amp; permission
               </span>
             </div>
           </a>
         
         
-          <a href="../permission/" title="4. COLLECT&#58; authenticated iDs &amp; permission" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../sync/" title="6. SYNCHRONIZE&#58; Update an affiliation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                4. COLLECT&#58; authenticated iDs &amp; permission
+                6. SYNCHRONIZE&#58; Update an affiliation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

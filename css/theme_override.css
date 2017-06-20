@@ -1,4 +1,10 @@
-.bs-sidebar.well {
-    max-height: 100%;
-    overflow-y: scroll;
+a {
+    color: #338caf;
+}
+
+a:focus,
+a:hover,
+.md-nav__link:focus, 
+.md-nav__link:hover {
+    color: #a6ce39;
 }
