@@ -182,12 +182,12 @@
         }, 
         {
             "location": "/resources/", 
-            "text": "RESOURCES", 
+            "text": "RESOURCES\n\n\n\n\nExample implementations and workflow guides \nhttps://members.orcid.org\n\n\nTechnical documentation \nhttps://members.orcid.org/api\n\n\nORCID API users group \nhttps://groups.google.com/group/orcid-api-users\n\n\nTechnical webinar schedule \nhttps://members.orcid.org/event-list\n\n\nORCID Support \nsupport@orcid.org", 
             "title": "RESOURCES"
         }, 
         {
             "location": "/resources/#resources", 
-            "text": "", 
+            "text": "Example implementations and workflow guides  https://members.orcid.org  Technical documentation  https://members.orcid.org/api  ORCID API users group  https://groups.google.com/group/orcid-api-users  Technical webinar schedule  https://members.orcid.org/event-list  ORCID Support  support@orcid.org", 
             "title": "RESOURCES"
         }
     ]
