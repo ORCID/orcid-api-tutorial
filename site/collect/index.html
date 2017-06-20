@@ -15,7 +15,7 @@
     
     
       
-        <title>4. COLLECT&#58; authenticated iDs &amp; permission - Hands-on with the ORCID API</title>
+        <title>4. COLLECT&#58; Get authenticated iDs &amp; permission - Hands-on with the ORCID API</title>
       
     
     
@@ -24,14 +24,16 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application-acc56dad49.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-8817cfa535.palette.css">
+      
     
     
       
         
         
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
@@ -44,7 +46,7 @@
   
   
   
-    <body>
+    <body data-md-color-primary="grey" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -61,7 +63,8 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href=".." title="Hands-on with the ORCID API" class="md-icon md-icon--home md-header-nav__button">
+          <a href=".." title="Hands-on with the ORCID API" class="md-logo md-header-nav__button">
+            <img src="../images/id-icon.svg" width="24" height="24">
           </a>
         
       </div>
@@ -74,7 +77,7 @@
             
               
             
-            4. COLLECT&#58; authenticated iDs &amp; permission
+            4. COLLECT&#58; Get authenticated iDs &amp; permission
           
         </span>
       </div>
@@ -122,7 +125,9 @@
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
-      <i class="md-icon md-icon--home md-nav__button"></i>
+      <i class="md-logo md-nav__button">
+        <img src="../images/id-icon.svg">
+      </i>
     
     Hands-on with the ORCID API
   </label>
@@ -159,7 +164,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../read-public/" title="2. Read public info" class="md-nav__link">
+    <a href="../read/" title="2. Read public info" class="md-nav__link">
       2. Read public info
     </a>
   </li>
@@ -171,7 +176,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../search-public/" title="3. Search public info" class="md-nav__link">
+    <a href="../search/" title="3. Search public info" class="md-nav__link">
       3. Search public info
     </a>
   </li>
@@ -188,22 +193,18 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        4. COLLECT&#58; authenticated iDs &amp; permission
+        4. COLLECT&#58; Get authenticated iDs &amp; permission
       </label>
     
-    <a href="./" title="4. COLLECT&#58; authenticated iDs &amp; permission" class="md-nav__link md-nav__link--active">
-      4. COLLECT&#58; authenticated iDs &amp; permission
+    <a href="./" title="4. COLLECT&#58; Get authenticated iDs &amp; permission" class="md-nav__link md-nav__link--active">
+      4. COLLECT&#58; Get authenticated iDs &amp; permission
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
-  
-    
   
   
     <label class="md-nav__title" for="toc">Table of contents</label>
@@ -218,29 +219,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#411-get-api-credentials" title="4.1.1 Get API credentials" class="md-nav__link">
-    4.1.1 Get API credentials
+  <a href="#get-api-credentials" title="Get API credentials" class="md-nav__link">
+    Get API credentials
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#412-create-an-authorization-url" title="4.1.2 Create an authorization URL" class="md-nav__link">
-    4.1.2 Create an authorization URL
+  <a href="#create-an-authorization-url" title="Create an authorization URL" class="md-nav__link">
+    Create an authorization URL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#413-get-an-authorization-code" title="4.1.3 Get an authorization Code" class="md-nav__link">
-    4.1.3 Get an authorization Code
+  <a href="#get-an-authorization-code" title="Get an authorization Code" class="md-nav__link">
+    Get an authorization Code
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#414-exchange-authorization-code-for-access-token-authenticated-id" title="4.1.4 Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    4.1.4 Exchange authorization code for access token &amp; authenticated iD
+  <a href="#exchange-authorization-code-for-access-token-authenticated-id" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
+    Exchange authorization code for access token &amp; authenticated iD
   </a>
   
 </li>
@@ -259,22 +260,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#431-configure-api-credentials" title="4.3.1 Configure API credentials" class="md-nav__link">
-    4.3.1 Configure API credentials
+  <a href="#configure-api-credentials" title="Configure API credentials" class="md-nav__link">
+    Configure API credentials
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#432-user-connect-your-institutional-account" title="4.3.2 (User) Connect your institutional account" class="md-nav__link">
-    4.3.2 (User) Connect your institutional account
+  <a href="#user-connect-your-institutional-account" title="(User) Connect your institutional account" class="md-nav__link">
+    (User) Connect your institutional account
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#433-exchange-authorization-code-for-access-token-authenticated-id" title="4.3.3 Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    4.3.3 Exchange authorization code for access token &amp; authenticated iD
+  <a href="#exchange-authorization-code-for-access-token-authenticated-id_1" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
+    Exchange authorization code for access token &amp; authenticated iD
   </a>
   
 </li>
@@ -333,7 +334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../add-info/" title="5. CONNECT&#58; Add an affiliation" class="md-nav__link">
+    <a href="../connect/" title="5. CONNECT&#58; Add an affiliation" class="md-nav__link">
       5. CONNECT&#58; Add an affiliation
     </a>
   </li>
@@ -345,7 +346,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../update-info/" title="6. SYNCHRONIZE&#58; Update an affiliation" class="md-nav__link">
+    <a href="../sync/" title="6. SYNCHRONIZE&#58; Update an affiliation" class="md-nav__link">
       6. SYNCHRONIZE&#58; Update an affiliation
     </a>
   </li>
@@ -389,8 +390,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -404,29 +403,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#411-get-api-credentials" title="4.1.1 Get API credentials" class="md-nav__link">
-    4.1.1 Get API credentials
+  <a href="#get-api-credentials" title="Get API credentials" class="md-nav__link">
+    Get API credentials
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#412-create-an-authorization-url" title="4.1.2 Create an authorization URL" class="md-nav__link">
-    4.1.2 Create an authorization URL
+  <a href="#create-an-authorization-url" title="Create an authorization URL" class="md-nav__link">
+    Create an authorization URL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#413-get-an-authorization-code" title="4.1.3 Get an authorization Code" class="md-nav__link">
-    4.1.3 Get an authorization Code
+  <a href="#get-an-authorization-code" title="Get an authorization Code" class="md-nav__link">
+    Get an authorization Code
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#414-exchange-authorization-code-for-access-token-authenticated-id" title="4.1.4 Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    4.1.4 Exchange authorization code for access token &amp; authenticated iD
+  <a href="#exchange-authorization-code-for-access-token-authenticated-id" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
+    Exchange authorization code for access token &amp; authenticated iD
   </a>
   
 </li>
@@ -445,22 +444,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#431-configure-api-credentials" title="4.3.1 Configure API credentials" class="md-nav__link">
-    4.3.1 Configure API credentials
+  <a href="#configure-api-credentials" title="Configure API credentials" class="md-nav__link">
+    Configure API credentials
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#432-user-connect-your-institutional-account" title="4.3.2 (User) Connect your institutional account" class="md-nav__link">
-    4.3.2 (User) Connect your institutional account
+  <a href="#user-connect-your-institutional-account" title="(User) Connect your institutional account" class="md-nav__link">
+    (User) Connect your institutional account
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#433-exchange-authorization-code-for-access-token-authenticated-id" title="4.3.3 Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    4.3.3 Exchange authorization code for access token &amp; authenticated iD
+  <a href="#exchange-authorization-code-for-access-token-authenticated-id_1" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
+    Exchange authorization code for access token &amp; authenticated iD
   </a>
   
 </li>
@@ -519,10 +518,11 @@
               
                 
                 
-                <h1 id="4-collect-get-authenticated-ids-permission">4. COLLECT: GET AUTHENTICATED iDs &amp; PERMISSION</h1>
-<p>In our first few API requests, we already knew which ORCID iD to use (our own!) and we read/searched public information, which didn't require any permission from the user. In practice, you'll need to gather up iDs for researchers whose ORCID records you want to read, update, or associate with records in your own system AND get permission to take certain actions, like adding information to their ORCID records.</p>
+                  <h1>4. COLLECT&#58; Get authenticated iDs &amp; permission</h1>
+                
+                <p>In our first few API requests, we already knew which ORCID iD to use (our own!) and we read/searched public information, which didn't require any permission from the user. In practice, you'll need to gather up iDs for researchers whose ORCID records you want to read, update, or associate with records in your own system AND get permission to take certain actions, like adding information to their ORCID records. In this section, we'll look at a few ways to get authenticated iDs and/or record access permission.</p>
 <p><strong>Authenticated iDs</strong></p>
-<p>ORCID is all about identifying who's who, so it's important that you get the correct iD for each researcher. The best way to do this is to collect <strong>Authenticated ORCID iDs</strong>, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. <a href="https://orcid.org/blog/2017/02/20/whats-so-special-about-signing">Learn more about Authenticated iDs</a></p>
+<p>ORCID is about disambiguation,it's important that you get the correct iD for each researcher. The best way to do this is to collect <strong>Authenticated ORCID iDs</strong>, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. <a href="https://orcid.org/blog/2017/02/20/whats-so-special-about-signing">Learn more about Authenticated iDs</a></p>
 <p><strong>Record access permission</strong></p>
 <p>Control over access to data in your ORCID record is one of <a href="https://orcid.org/about/what-is-orcid/principles">ORCID's core princples</a>. While you can read public ORCID data without the record owner's involvement, some API actions require permission:</p>
 <ul>
@@ -541,11 +541,16 @@
 <li>Get an authorization code</li>
 <li>Exchange the authorization code for an access token</li>
 </ol>
-<h3 id="411-get-api-credentials">4.1.1 Get API credentials</h3>
+<h3 id="get-api-credentials">Get API credentials</h3>
 <p>API credentials consisting of a <strong>client ID</strong> and a <strong>client secret</strong> are needed in order to get Authenticated iDs and/or user permissions.</p>
 <p>To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. To request API credentials, see <a href="https://orcid.org/content/register-client-application">Request API credentials</a></p>
 <p>For this workshop, we'll use a set of demo credentials:</p>
-<h3 id="412-create-an-authorization-url">4.1.2 Create an authorization URL</h3>
+<pre><code>client_id: APP-XA6KUTFCVQL0622C
+client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
+</code></pre>
+
+<p>(Demo client secret created for this workshop - do not share API client secrets!)</p>
+<h3 id="create-an-authorization-url">Create an authorization URL</h3>
 <p>To kick off the OAuth process, we'll need to create an special authorization URL that sends users to an ORCID sign-in screen. This URL consists of <strong>Authorization endpoint</strong>, plus <strong>Parameters</strong> that identify your organization and the permissions you want to request.</p>
 <p><strong>Authorization endpoint (Sandbox)</strong></p>
 <p><code>https://sandbox.orcid.org/oauth/authorize</code></p>
@@ -585,7 +590,7 @@
 <pre><code>https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&amp;response_type=code&amp;scope=/activities/update&amp;redirect_uri=https://developers.google.com/oauthplayground
 </code></pre>
 
-<h3 id="413-get-an-authorization-code">4.1.3 Get an authorization Code</h3>
+<h3 id="get-an-authorization-code">Get an authorization Code</h3>
 <ol>
 <li>
 <p>In a new window or tab, visit<br>
@@ -599,7 +604,7 @@
 <img src="../images/04-2_auth-code-address.png" width="400" alt="ORCID OAuth sign-in screen" /><br><br>
 <img src="../images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" /></li>
 </ol>
-<h3 id="414-exchange-authorization-code-for-access-token-authenticated-id">4.1.4 Exchange authorization code for access token &amp; authenticated iD</h3>
+<h3 id="exchange-authorization-code-for-access-token-authenticated-id">Exchange authorization code for access token &amp; authenticated iD</h3>
 <p>Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. </p>
 <p>In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this workshop, we'll use Google OAuth Playground to simulate a web application.</p>
 <ol>
@@ -655,7 +660,7 @@
 <p>ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> and <a href="https://technical.edugain.org/status.php">eduGAIN</a>.</p>
 <p>ORCID membership is not required in order for institutional sign-in to work for your researchers, however, ORCID members who are <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> or <a href="https://technical.edugain.org/status.php">eduGAIN</a> federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect &amp; Connect feature.</p>
 <p>In this section, we'll take a look at this feature.</p>
-<h3 id="431-configure-api-credentials">4.3.1 Configure API credentials</h3>
+<h3 id="configure-api-credentials">Configure API credentials</h3>
 <p>In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect &amp; Connect for your organization. </p>
 <p>To have your API credentials configured for Institutional Collect &amp; Connect, contact <a href="../support@orcid.org">support@orcid.org</a> with the following information:</p>
 <ul>
@@ -664,7 +669,7 @@
 <li>Redirect URI: The page on your site that users should be directed to after they complete the cross-link process. This can bedifferent from the redirect URI you use for other ORCID API applications.</li>
 <li>Permission scope(s) that you would like (<code>/authenticate</code>, <code>/read-limited</code>, <code>/activities/update</code>, <code>/person/update</code>)</li>
 </ul>
-<h3 id="432-user-connect-your-institutional-account">4.3.2 (User) Connect your institutional account</h3>
+<h3 id="user-connect-your-institutional-account">(User) Connect your institutional account</h3>
 <p><strong>Not a member of a supported federation?</strong> Test out ORCID institutional sign-in with a <a href="https://app.unitedid.org/signup">United ID</a> account. United ID is a free and independent online identity service <em>(Note: United ID requires use of a 2-Factor Authentication method, like <a href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>)</em>.</p>
 <ol>
 <li>Sign out of your Sandbox record - click the <strong>Sign out</strong> button in the upper right corner or visit <a href="https://sandbox.orcid.org/signout">https://sandbox.orcid.org/signout</a></li>
@@ -682,7 +687,7 @@
 <li>After granting permission, you'll be redirected to the Redirect URI specified for your API credentials - this page should show a success or error message depending on whether <strong>Authorize</strong> or <strong>Deny</strong> was clicked, and it should also provide a link back to ORCID and links to your local ORCID resources.<br>
   <img src="../images/04-3_inst-connect-redirect.png" width="600" alt="Example success message shown to users after completing the institution connect process" /></li>
 </ol>
-<h3 id="433-exchange-authorization-code-for-access-token-authenticated-id">4.3.3 Exchange authorization code for access token &amp; authenticated iD</h3>
+<h3 id="exchange-authorization-code-for-access-token-authenticated-id_1">Exchange authorization code for access token &amp; authenticated iD</h3>
 <p>Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
   <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /> </p>
 <h2 id="43-vendor-systems">4.3 Vendor systems</h2>
@@ -720,7 +725,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../search-public/" title="3. Search public info" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../search/" title="3. Search public info" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -735,7 +740,7 @@
           </a>
         
         
-          <a href="../add-info/" title="5. CONNECT&#58; Add an affiliation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../connect/" title="5. CONNECT&#58; Add an affiliation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">

@@ -19,7 +19,7 @@
 
     
     <url>
-     <loc>/read-public/</loc>
+     <loc>/read/</loc>
      <lastmod>2017-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -27,7 +27,7 @@
 
     
     <url>
-     <loc>/search-public/</loc>
+     <loc>/search/</loc>
      <lastmod>2017-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -35,7 +35,7 @@
 
     
     <url>
-     <loc>/permission/</loc>
+     <loc>/collect/</loc>
      <lastmod>2017-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -43,7 +43,7 @@
 
     
     <url>
-     <loc>/add-info/</loc>
+     <loc>/connect/</loc>
      <lastmod>2017-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -51,7 +51,7 @@
 
     
     <url>
-     <loc>/update-info/</loc>
+     <loc>/sync/</loc>
      <lastmod>2017-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
