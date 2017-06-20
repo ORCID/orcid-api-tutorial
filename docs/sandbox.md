@@ -5,7 +5,7 @@ For this workshop, we'll use ORCID's test environment, the [ORCID Sandbox](https
 * Menu links to informational content (For Researchers, For Organizations, About, Help, etc) don't work in the Sandbox
 * Sandbox doesn't contain production data
 
-##1.1 Create a Sandbox ORCID record
+##Create a Sandbox ORCID record
 To get started, you'll need to register an ORCID iD in the Sandbox.
 
 1. In a new window or tab, visit <a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/register</a>
@@ -15,7 +15,7 @@ _**IMPORTANT!** Don&rsquo;t use a real email address! Instead, make up an addres
 4. Click the **I consent…** checkbox and click **Register**.<br>
 *Remember the email and password - you'll need these throughout the rest of the tutorial!*
 
-##1.2 Verify your email address
+##Verify your email address
 Before you can edit information on your ORCID record, you'll need to verify your email address.
 
 1. In a new window or tab, visit [https://www.mailinator.com](https://www.mailinator.com/)
@@ -28,7 +28,7 @@ Before you can edit information on your ORCID record, you'll need to verify your
 *Make note of the 16-digit iD for your Sandbox record - you'll need this throughout the rest of the tutorial!*<br>
 <img src="../images/01-2_new-record.png" width="600" alt="New ORCID Sandbox record" />
 
-##1.3 Add info to your Sandbox record
+##Add info to your Sandbox record
 1. **Add a country:** Click the pencil icon beside Country, choose a country and click **Save changes**.<br>
 <img src="../images/01-3_edit-country.png" width="400" alt="ORCID edit country screen" />
 2. **Add employment:** In the **Employment** section, click **Add employment** > **Add manually**, fill out the form and click **Add to list**.<br>

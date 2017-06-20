@@ -1,6 +1,6 @@
 In a real-world situation, you may need to update a researcher's affiliation. In this section, we'll update our education affiliation to include an end date.
 
-##6.1 Update an education affiliation
+##Update an education affiliation
 
 1. In the **Request/Response** section at right, find the **put-code** for the education affiliation that you added in the previous section.<br>
 <img src="../images/06-2_put-code.png" width="600" alt="Detailed view of Google OAuth Playground response for successful education affiliation POST request showing put-code" />
@@ -25,7 +25,7 @@ In a real-world situation, you may need to update a researcher's affiliation. In
 8. Visit the **public  view** of your Sandbox record at ```http://sandbox.orcid.org/[ORCID ID]``` to see your updated education affiliation.<br>
 <img src="../images/06-2_updated-affiliation.png" width="600" alt="ORCID record with updated education affiliation item" /><br>
 
-##6.2 Affiliation end date XML
+##Affiliation end date XML
 
 ```
 <common:end-date>

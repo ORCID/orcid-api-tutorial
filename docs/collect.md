@@ -12,7 +12,7 @@ Control over access to data in your ORCID record is one of [ORCID's core princpl
 * Read non-public data (items with privacy set to 'Trusted parties')
 * Add/update record data
 
-##4.1 Custom integration
+##Custom integration
 
 The most customizable way to get Authenticated iDs is by building your own API integration. In this section, we'll walk through the steps that your own custom integratio would need to complete in order to get an authenticated iD and record access permission.
 
@@ -100,7 +100,7 @@ In a real-world situation, this exchange would be done by your system, using a p
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
 <img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" />
 
-##4.3 Institutional sign-in
+##Institutional sign-in
 
 ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently [SURFconext](https://www.surf.nl/en/services-and-products/surfconext/index.html) and [eduGAIN](https://technical.edugain.org/status.php).
 
@@ -141,19 +141,19 @@ To have your API credentials configured for Institutional Collect & Connect, con
 Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
   <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /> 
 
-##4.3 Vendor systems
+##Vendor systems
 
 Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details. 
 
 Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.
 
-##4.4 Share my iD
+##Share my iD
 
 Need a quick way to collect authenticated iDs with no programming or IT resources needed?
 [Share my iD](https://share-my-id.orcid.org/) is a new app from ORCID that allows anyone with an ORCID iD to get iDs from other ORCID users.<br>
   <img src="../images/04-4_share-my-id.png" width="600" alt="ORCID Share my iD app home page" /> 
 
-##4.5 DOI metadata
+##DOI metadata
 
 Many systems now collect authenticated ORCID iDs and publish them in DOI (and other persistent identifier) metadata. If you have a DOI for a publication, dataset, or other digital object, you can check its metadata for author ORCID iDs.
 

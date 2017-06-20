@@ -2,7 +2,7 @@ In addition to reading information on a specific ORCID record, you can use the A
 
 In this section, we'll try searches using just a few of the available fields. For a full list of fields that you can search, see our [Basic tutorial: Searching Data using the ORCID API](https://members.orcid.org/api/tutorial/search-orcid-registry)
 
-##3.1 Search for records with an institutional affiliation
+##Search for records with an institutional affiliation
 1. In a new window or tab, visit [https://developers.google.com/oauthplayground](https://developers.google.com/oauthplayground)
 2. On the left side of the screen, click **Step 3 Configure request to API**
 3. In the **Request URI** field enter:<br>
@@ -13,7 +13,7 @@ In this section, we'll try searches using just a few of the available fields. Fo
 5. The total number of matching ORCID iDs and a list of those iDs will appear **Request/Response** section<br>
 <img src="../images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" />
 
-##3.2 Paging through search results
+##Paging search results
 If your search matches more than 100 ORCID iDs, only the first 100 iDs will be returned in the list of results. To get the next set of results, you'll need to make another API request.
 
 1. On the left side of the screen, click **Step 3 Configure request to API**

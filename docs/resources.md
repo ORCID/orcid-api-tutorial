@@ -1,5 +1,3 @@
-#RESOURCES
-
 * Example implementations and workflow guides [https://members.orcid.org](https://members.orcid.org)
 * Technical documentation [https://members.orcid.org/api](https://members.orcid.org/api)
 * ORCID API users group [https://groups.google.com/group/orcid-api-users](https://groups.google.com/group/orcid-api-users)

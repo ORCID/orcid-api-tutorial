@@ -1,6 +1,6 @@
 In this section, we'll use the Public API to take a look at the underlying data for our Sandbox record. 
 
-##2.1 Read a record summary
+##Read a record summary
 1. In a new window or tab, visit [https://developers.google.com/oauthplayground](https://developers.google.com/oauthplayground)
 2. On the left side of the screen, click **Step 3 Configure request to API**
 3. In the **Request URI** field enter:<br>
@@ -11,7 +11,7 @@ In this section, we'll use the Public API to take a look at the underlying data 
 5. A summary version of your record in XML format will appear in the **Request/Response** section<br>
 <img src="../images/02-1_response-record.png" width="600" alt="Google OAuth Playground response for ORCID record summary" />
 
-##2.2 Read activity details
+##Read activity details
 To get more information about a specific item on an ORCID record, you can retrieve that individual item using its put-code.
 
 1. In the record summary XML, find the **activities-summary** section, then find the **put-code** for the employment item that you added in the previous section.<br>

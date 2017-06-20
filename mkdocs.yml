@@ -9,12 +9,12 @@ extra:
     text: 'Noto Sans'
   logo: 'images/id-icon.svg' 
 pages:
-    - Introduction: index.md
-    - 1. Set up the Sandbox: sandbox.md
-    - 2. Read public info: read.md
-    - 3. Search public info: search.md
-    - 4. COLLECT&#58; Get authenticated iDs &amp; permission: collect.md
-    - 5. CONNECT&#58; Add an affiliation: connect.md
-    - 6. SYNCHRONIZE&#58; Update an affiliation: sync.md
-    - 7. DISPLAY&#58; Presenting ORCID in your system: display.md
-    - RESOURCES: resources.md
+    - 1. Introduction: index.md
+    - 2. Set up the Sandbox: sandbox.md
+    - 3. Read public info: read.md
+    - 4. Search public info: search.md
+    - 5. COLLECT&#58; Get authenticated iDs &amp; permission: collect.md
+    - 6. CONNECT&#58; Add an affiliation: connect.md
+    - 7. SYNCHRONIZE&#58; Update an affiliation: sync.md
+    - 8. DISPLAY&#58; Presenting ORCID in your system: display.md
+    - 9. RESOURCES: resources.md
