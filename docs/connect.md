@@ -1,6 +1,6 @@
 Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.
 
-##5.1 Add an education affiliation
+##Add an education affiliation
 1. Beneath **Step 3: Configure request to API**, set **HTTP Method** to **POST**.<br>
 <img src="../images/06-1_http-method-post.png" width="400" alt="Google OAuth Playground HTTP method set to POST" />
 2. Click **Add headers**, enter the values below, then click **Add** and **Close**
@@ -28,7 +28,7 @@ Now that we've got an Access Token, we can use it like a password to take the AP
 <img src="../images/06-1_new-affiliation.png" width="600" alt="ORCID record with new education affiliation item added" /><br>
 *Notice that **Source** shows the name of the API client that added the affiliation - this is a key element that helps other systems consuming ORCID data determine whether this piece of information is authoritative.**
 
-##5.2 Education affiliation XML
+##Education affiliation XML
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
