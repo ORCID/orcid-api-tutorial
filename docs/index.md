@@ -11,18 +11,20 @@ ORCID wants to help make it possible to do things like:
 
 ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential. 
 
-This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
+This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can /or add affiliations/contributionshelp everyone involved in research spend more time *making* contributions and less time *managing* them!
 
 ##Collect & Connect
 A top-notch ORCID integration includes the following capabilities:
 
 <img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/> **Collect** authenticated ORCID iDs
 
-<img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/> **Connect** Get data from ORCID and/or add affiliations/contributions to ORCID
+<img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/> **Connect** Get data from ORCID/add data to ORCID
 
-<img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/> **Synchronize** Add data to/get data from ORCID on an ongoing basis 
+<img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/> **Synchronize** Get data from ORCID/add data to ORCID on an ongoing basis 
 
 <img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/> **Display** iDs you’ve collected in your own system
+
+[Learn more about these integration steps](https://members.orcid.org/)
 
 
 ##About the ORCID APIs
@@ -31,11 +33,11 @@ ORCID's web interface gives researchers a way to interact with their record, but
 * **Public API:** Free to anyone with an ORCID iD
 * **Member API:** Available to ORCID member organizations (Sandbox Member API freely available for testing)
 
-|                | Public API | Member API |
+| Features       | Public API | Member API |
 | -------------- | ---------- | ---------- |
 |**COLLECT**<br>Get authenticated ORCID iDs| <img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/> | <img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/> |
-|**CONNECT**<br>Get data from ORCID + add affiliations/contributions to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/> |
-|**SYNCHRONIZE**<br>Add data to/get data from ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/> |
+|**CONNECT**<br>Get data from ORCID/add data to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/> |
+|**SYNCHRONIZE**<br>Get data from ORCID/add data to ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/> |
 |**DISPLAY**<br>Show iDs you’ve collected in your own system| <img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/> | <img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/> |
 
 All of the ORCID APIs are  based on the same set of technologies:
@@ -43,6 +45,8 @@ All of the ORCID APIs are  based on the same set of technologies:
 * **REST:** ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.
 * **OAuth:** ORCID  APIs use the OAuth 2.0 authentication protocol in order to grant client  applications access to users&rsquo; ORCID records.
 * **XML/JSON:** ORCID APIs support data exchange in either XML or JSON format.
+
+[Learn more about the ORCID APIs](https://members.orcid.org/api/about-orcid-apis)
 
 ##Pre-requisites
 To complete this tutorial, you'll need the following tools:
