@@ -1,6 +1,8 @@
 Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.
 
 ##Add an education affiliation
+Still have that Google OAuth Playground window open? If so, continue with step 1 below. If not, go back and repeat the [Get an authorization code](/collect/#get-an-authorization-code) and [Exchange authorization code for an access token](/collect/#exchange-authorization-code-for-access-token-authenticated-id) steps from the previous section before moving on to the steps below.
+
 1. Beneath **Step 3: Configure request to API**, set **HTTP Method** to **POST**.<br>
 <img src="../images/06-1_http-method-post.png" width="400" alt="Google OAuth Playground HTTP method set to POST" />
 2. Click **Add headers**, enter the values below, then click **Add** and **Close**
