@@ -35,7 +35,7 @@ ORCID's web interface gives researchers a way to interact with their record, but
 
 | Features       | Public API | Member API |
 | -------------- | ---------- | ---------- |
-|**COLLECT**<br>Get authenticated ORCID iDs| <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> | <img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/> |
+|**COLLECT**<br>Get authenticated ORCID iDs| <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> | <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> |
 |**CONNECT**<br>Get data from ORCID/add data to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> |
 |**SYNCHRONIZE**<br>Get data from ORCID/add data to ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> |
 |**DISPLAY**<br>Show iDs you’ve collected in your own system| <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> | <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> |

@@ -368,13 +368,13 @@
 <li>Find the current affiliation(s) of any researcher</li>
 </ul>
 <p>ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential. </p>
-<p>This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can /or add affiliations/contributionshelp everyone involved in research spend more time <em>making</em> contributions and less time <em>managing</em> them!</p>
+<p>This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time <em>making</em> contributions and less time <em>managing</em> them!</p>
 <h2 id="collect-connect">Collect &amp; Connect</h2>
 <p>A top-notch ORCID integration includes the following capabilities:</p>
-<p><img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/> <strong>Collect</strong> authenticated ORCID iDs</p>
-<p><img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/> <strong>Connect</strong> Get data from ORCID/add data to ORCID</p>
-<p><img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/> <strong>Synchronize</strong> Get data from ORCID/add data to ORCID on an ongoing basis </p>
-<p><img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/> <strong>Display</strong> iDs you’ve collected in your own system</p>
+<p><img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> <strong>Collect</strong> authenticated ORCID iDs</p>
+<p><img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> <strong>Connect</strong> Get data from ORCID/add data to ORCID</p>
+<p><img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> <strong>Synchronize</strong> Get data from ORCID/add data to ORCID on an ongoing basis </p>
+<p><img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> <strong>Display</strong> iDs you’ve collected in your own system</p>
 <p><a href="https://members.orcid.org/">Learn more about these integration steps</a></p>
 <h2 id="about-the-orcid-apis">About the ORCID APIs</h2>
 <p>ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).</p>
@@ -393,30 +393,30 @@
 <tbody>
 <tr>
 <td><strong>COLLECT</strong><br>Get authenticated ORCID iDs</td>
-<td><img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/></td>
+<td><img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/></td>
 <td><img src="images/Collect_4PP.png" width="28" alt="ORCID Collect icon"/></td>
 </tr>
 <tr>
 <td><strong>CONNECT</strong><br>Get data from ORCID/add data to ORCID</td>
 <td><em>Get public data only<br>(can't add data)</em></td>
-<td><img src="images/Connect_4PP.png" width="28" alt="ORCID Connect icon"/></td>
+<td><img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/></td>
 </tr>
 <tr>
 <td><strong>SYNCHRONIZE</strong><br>Get data from ORCID/add data to ORCID on an ongoing basis</td>
 <td><em>Get public data only<br>(can't add data)</em></td>
-<td><img src="images/Synchronize_4PP.png" width="28" alt="ORCID Synchronize icon"/></td>
+<td><img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/></td>
 </tr>
 <tr>
 <td><strong>DISPLAY</strong><br>Show iDs you’ve collected in your own system</td>
-<td><img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/></td>
-<td><img src="images/Display_4PP.png" width="28" alt="ORCID Display icon"/></td>
+<td><img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/></td>
+<td><img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/></td>
 </tr>
 </tbody>
 </table>
 <p>All of the ORCID APIs are  based on the same set of technologies:</p>
 <ul>
-<li><strong>REST:</strong> ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.</li>
-<li><strong>OAuth:</strong> ORCID  APIs use the OAuth 2.0 authentication protocol in order to grant client  applications access to users&rsquo; ORCID records.</li>
+<li><strong>REST:</strong> ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP to transfer information.</li>
+<li><strong>OAuth:</strong> ORCID  APIs use the <a href="https://oauth.net/2/">OAuth 2.0 authentication protocol</a> to grant client  applications access to users&rsquo; ORCID records.</li>
 <li><strong>XML/JSON:</strong> ORCID APIs support data exchange in either XML or JSON format.</li>
 </ul>
 <p><a href="https://members.orcid.org/api/about-orcid-apis">Learn more about the ORCID APIs</a></p>
@@ -427,7 +427,7 @@
 <li><strong>Internet connection</strong></li>
 <li><strong>Plain text editor:</strong> TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor</li>
 <li><strong>Software capable of making HTTP requests:</strong><ul>
-<li>cURL: Free, command-line application available for Mac  or Windows at <a href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> (pre-installed on most Mac OS versions; accessible within Terminal application)</li>
+<li><a href="http://curl.haxx.se/download.html">cURL</a>: Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions; accessible within Terminal application)</li>
 <li>Online tools, like <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a> or <a href="http://hurl.it&quot;&gt;hurl.it">hurl.it</a></li>
 </ul>
 </li>
