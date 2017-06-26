@@ -8,7 +8,7 @@ For this workshop, we'll use ORCID's test environment, the [ORCID Sandbox](https
 ##Create a Sandbox ORCID record
 To get started, you'll need to register an ORCID iD in the Sandbox.
 
-1. In a new window or tab, visit <a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/register</a>
+1. In a new window or tab, visit <a href="https://sandbox.orcid.org/register" target="_blank">https://sandbox.orcid.org/register</a>
 3. Complete the form with a name, email, and password.<br>
 _**IMPORTANT!** Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (ex: sgarcia@mailinator.com)._<br>
 <img src="../images/01-1_register.png" width="600" alt="ORCID Sandbox registration form" />

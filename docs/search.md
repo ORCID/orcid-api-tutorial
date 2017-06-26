@@ -7,7 +7,6 @@ In this section, we'll try searches using just a few of the available fields. Fo
 2. On the left side of the screen, click **Step 3 Configure request to API**
 3. In the **Request URI** field enter:<br>
 ```https://pub.sandbox.orcid.org/v2.0/search/?q=affiliation-org-name:%22Boston%20University%22```<br>
-*Optional: <br>
 <img src="../images/02-1_request-record.png" width="400" alt="Google OAuth Playground request for ORCID record summary" />
 4. Click **Send the request**
 5. The total number of matching ORCID iDs and a list of those iDs will appear **Request/Response** section<br>
