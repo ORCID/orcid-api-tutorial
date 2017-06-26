@@ -18,7 +18,8 @@ img {
     margin: .5em;
 }
 
-img.icon {
+img.icon,
+nav img {
     border: none;
     margin: 0;
 }

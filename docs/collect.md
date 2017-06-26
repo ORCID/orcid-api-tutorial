@@ -106,7 +106,7 @@ ORCID recently added the option to sign in using institutional credentials. Inst
 
 ORCID membership is not required in order for institutional sign-in to work for your researchers, however, ORCID members who are [SURFconext](https://www.surf.nl/en/services-and-products/surfconext/index.html) or [eduGAIN](https://technical.edugain.org/status.php) federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect & Connect feature.
 
-In this section, we'll take a look at this feature.
+In this section, we'll take a look at this feature. [Learn more about ORCID institutional signin, including configuring up your IdP](https://members.orcid.org/api/integrate/institution-sign-in)
 
 ###Configure API credentials
 In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect & Connect for your organization. 
