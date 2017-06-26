@@ -12,3 +12,13 @@ a:hover,
 [data-md-color-primary=grey] .md-typeset a:hover{
     color: #a6ce39;
 }
+
+img {
+    border: 1px solid #eee;
+    margin: .5em;
+}
+
+img.icon {
+    border: none;
+    margin: 0;
+}
