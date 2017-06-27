@@ -100,6 +100,12 @@ In a real-world situation, this exchange would be done by your system, using a p
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
 <img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" />
 
+##Vendor systems
+
+Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details. 
+
+Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.
+
 ##Institutional sign-in
 
 ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently [SURFconext](https://www.surf.nl/en/services-and-products/surfconext/index.html) and [eduGAIN](https://technical.edugain.org/status.php).
@@ -140,12 +146,6 @@ To have your API credentials configured for Institutional Collect & Connect, con
 ###Exchange authorization code for access token & authenticated iD
 Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
   <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /> 
-
-##Vendor systems
-
-Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details. 
-
-Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.
 
 ##Share my iD
 
