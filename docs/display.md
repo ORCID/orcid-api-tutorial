@@ -6,9 +6,9 @@ Researchers want to know that using their iD in your system has had some effect.
 
 Show the iD icon followed by the full iD URI, linked to the iD URI, with or without the https scheme:
 
-<a href="https://orcid.org/0000-0002-1825-0097"><img alt="ORCID iD" src="http://orcid.org/sites/default/files/images/orcid_16x16(1).gif" style="width:16px; height:16px; margin-right:4px; margin-left:4px">orcid.org/0000-0002-1825-0097</a>
+<a href="https://orcid.org/0000-0002-1825-0097"><img alt="ORCID iD" class="icon" src="http://orcid.org/sites/default/files/images/orcid_16x16(1).gif" style="width:16px; height:16px; margin-right:4px; margin-left:4px">orcid.org/0000-0002-1825-0097</a>
 
-<a href="https://orcid.org/0000-0002-1825-0097"><img alt="ORCID iD" src="http://orcid.org/sites/default/files/images/orcid_16x16(1).gif" style="width:16px; height:16px; margin-right:4px; margin-left:4px">https://orcid.org/0000-0002-1825-0097</a>
+<a href="https://orcid.org/0000-0002-1825-0097"><img alt="ORCID iD" class="icon" src="http://orcid.org/sites/default/files/images/orcid_16x16(1).gif" style="width:16px; height:16px; margin-right:4px; margin-left:4px">https://orcid.org/0000-0002-1825-0097</a>
 
 For more details, see our [Trademark and iD Display Guidelines](https://orcid.org/trademark-and-id-display-guidelines)
 
