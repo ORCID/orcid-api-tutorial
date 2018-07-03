@@ -9,33 +9,22 @@ ORCID wants to help make it possible to do things like:
 * Get (nearly) real-time data about researchers’ publications and grants
 * Find the current affiliation(s) of any researcher
 
-ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential. 
+ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential.
 
 This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
-
-##Collect & Connect
-A top-notch ORCID integration includes the following capabilities:
-
-<img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> **Collect** authenticated ORCID iDs
-
-<img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> **Connect** Get data from ORCID/add data to ORCID
-
-<img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> **Synchronize** Get data from ORCID/add data to ORCID on an ongoing basis 
-
-<img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> **Display** iDs you’ve collected in your own system
-
-[Learn more about these integration steps](https://members.orcid.org/)
-
 
 ##About the ORCID APIs
 ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).
 
 * **Public API:** Free to anyone with an ORCID iD
 * **Member API:** Available to ORCID member organizations (Sandbox Member API freely available for testing)
+* **Premium Member API** Available to ORCID premium member organizations (Sandbox Member API freely available for testing)
 
-| Features       | Public API | Member API |
-| -------------- | ---------- | ---------- |
-|**COLLECT**<br>Get authenticated ORCID iDs| <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> | <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> |
+| Features       | Public API | Member API |Premium Member API |
+| -------------- | ---------- | ---------- | ----------------- |
+|Authenticate: Get a user’s authenticated ORCID iD
+Read (Public): Read public data on ORCID records
+Create: Help researchers register for an ORCID iD using our create-on-demand process |
 |**CONNECT**<br>Get data from ORCID/add data to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> |
 |**SYNCHRONIZE**<br>Get data from ORCID/add data to ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> |
 |**DISPLAY**<br>Show iDs you’ve collected in your own system| <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> | <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> |

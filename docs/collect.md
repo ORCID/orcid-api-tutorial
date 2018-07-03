@@ -16,9 +16,9 @@ Control over access to data in your ORCID record is one of [ORCID's core princpl
 
 The most customizable way to get Authenticated iDs is by building your own API integration. In this section, we'll walk through the steps that your own custom integratio would need to complete in order to get an authenticated iD and record access permission.
 
-**OAuth 2.0** 
+**OAuth 2.0**
 
-Getting an Authenticated iD and record access permission from a user involves following [OAuth 2.0](https://oauth.net/2/), an industry-standard protocol for authorization. OAuth allows a user to give a website or application access to account information stored on another site, without giving that site their password. 
+Getting an Authenticated iD and record access permission from a user involves following [OAuth 2.0](https://oauth.net/2/), an industry-standard protocol for authorization. OAuth allows a user to give a website or application access to account information stored on another site, without giving that site their password.
 
 If you've ever signed into a site using Google or Facebook instead of your credentials for that particular site, you've already used OAuth!
 
@@ -77,7 +77,7 @@ https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&respons
 <img src="../images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" />
 
 ###Exchange authorization code for access token & authenticated iD
-Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. 
+Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for.
 
 In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this workshop, we'll use Google OAuth Playground to simulate a web application.
 
@@ -102,7 +102,7 @@ In a real-world situation, this exchange would be done by your system, using a p
 
 ##Vendor systems
 
-Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details. 
+Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details.
 
 Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.
 
@@ -115,7 +115,7 @@ ORCID membership is not required in order for institutional sign-in to work for 
 In this section, we'll take a look at this feature. [Learn more about ORCID institutional signin, including configuring up your IdP](https://members.orcid.org/api/integrate/institution-sign-in)
 
 ###Configure API credentials
-In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect & Connect for your organization. 
+In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect & Connect for your organization.
 
 To have your API credentials configured for Institutional Collect & Connect, contact [support@orcid.org](support@orcid.org) with the following information:
 
@@ -130,7 +130,7 @@ To have your API credentials configured for Institutional Collect & Connect, con
 
   1. Sign out of your Sandbox record - click the **Sign out** button in the upper right corner or visit [https://sandbox.orcid.org/signout](https://sandbox.orcid.org/signout)
   2. Visit [https://sandbox.orcid.org/signin](https://sandbox.orcid.org/signin) and click **Sign in using your Institutional Account**
-  3. Enter your organization's name in the box, or choose to pick it from the list. 
+  3. Enter your organization's name in the box, or choose to pick it from the list.
   <img src="../images/04-3_signin-inst-account.png" width="400" alt="ORCID sign-in screen showing institutional account sign-in">
   4. Sign into your institution account<br>
   <img src="../images/04-3_united-id-login.png" width="400" alt="United ID login screen">
@@ -145,22 +145,22 @@ To have your API credentials configured for Institutional Collect & Connect, con
 
 ###Exchange authorization code for access token & authenticated iD
 Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
-  <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /> 
+  <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" />
 
 ##Share my iD
 
 Need a quick way to collect authenticated iDs with no programming or IT resources needed?
 [Share my iD](https://share-my-id.orcid.org/) is a new app from ORCID that allows anyone with an ORCID iD to get iDs from other ORCID users.<br>
-  <img src="../images/04-4_share-my-id.png" width="600" alt="ORCID Share my iD app home page" /> 
+  <img src="../images/04-4_share-my-id.png" width="600" alt="ORCID Share my iD app home page" />
 
 ##DOI metadata
 
 Many systems now collect authenticated ORCID iDs and publish them in DOI (and other persistent identifier) metadata. If you have a DOI for a publication, dataset, or other digital object, you can check its metadata for author ORCID iDs.
 
 ###Example: CrossRef API
-For example, using the [CrossRef REST API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md), we can find an author's ORCID iD in the DOI metadata for ```http://dx.doi.org/10.1155/2013/364301``` 
+For example, using the [CrossRef REST API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md), we can find an author's ORCID iD in the DOI metadata for ```http://dx.doi.org/10.1155/2013/364301```
 
 1. In a new window or tab, visit ```https://api.crossref.org/v1/works/10.1155/2013/364301```
 2. In the JSON data that appears, ORCID iDs submitted by the publisher in the DOI metadata are included in the ```author``` element.
 <br>
-  <img src="../images/04-5_doi-metadata.png" width="400" alt="ORCID in DOI metadata" /> 
+  <img src="../images/04-5_doi-metadata.png" width="400" alt="ORCID in DOI metadata" />

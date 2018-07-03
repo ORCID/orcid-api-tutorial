@@ -1,13 +1,12 @@
 site_name: Hands-on with the ORCID API
 theme: material
-extra_css: 
-    - css/theme_override.css
+extra_css: [css/theme_override.css]
 extra:
   palette:
     primary: 'grey'
   font:
     text: 'Noto Sans'
-  logo: 'images/id-icon.svg' 
+  logo: 'images/id-icon.svg'
 pages:
     - 1. Introduction: index.md
     - 2. Set up the Sandbox: sandbox.md
