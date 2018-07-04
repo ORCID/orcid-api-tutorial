@@ -11,7 +11,18 @@ ORCID wants to help make it possible to do things like:
 
 ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential.
 
-This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
+##About this tutorial
+
+This tutorial provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
+
+In this tutorial you will learn:
+
+ * The types of ORCID APIs and what you can do with them
+ * How to get set up with the ORCID sandbox to test your API integration
+ * How to read and search information from the public API
+ * What a Client ID and Client Secret is and how to use them
+ * How to get an access token using the mysterious three legged OAuth process
+
 
 ##About the ORCID APIs
 ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).
@@ -22,12 +33,14 @@ ORCID's web interface gives researchers a way to interact with their record, but
 
 | Features       | Public API | Member API |Premium Member API |
 | -------------- | ---------- | ---------- | ----------------- |
-|Authenticate: Get a user’s authenticated ORCID iD
-Read (Public): Read public data on ORCID records
-Create: Help researchers register for an ORCID iD using our create-on-demand process |
-|**CONNECT**<br>Get data from ORCID/add data to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> |
-|**SYNCHRONIZE**<br>Get data from ORCID/add data to ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> |
-|**DISPLAY**<br>Show iDs you’ve collected in your own system| <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> | <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> |
+Authenticate: Get a user’s authenticated ORCID iD|yes|yes|yes|
+Read (Public): Read public data on ORCID records|yes|yes|yes|
+Create: Help researchers register for an ORCID iD using our create-on-demand process |yes|yes|yes|
+Read (Limited): Read limited-access data on ORCID records|no|yes|yes|
+Add: Post new items to a record|no|yes|yes|
+Update: Edit or delete items you previously added|no|yes|yes|
+Integration (using client credentials)|no|yes one only|yes up to five|
+Webhooks: Receive notifications of updates to your users' ORCID records|no|no|yes|
 
 All of the ORCID APIs are  based on the same set of technologies:
 

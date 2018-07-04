@@ -6,9 +6,10 @@ a,
 
 a:focus,
 a:hover,
+.md-header
 .md-nav__link:focus,
 .md-nav__link:hover,
-[data-md-color-primary=black] .md-typeset a:focus,
+[data-md-color-primary=grey] .md-typeset a:focus,
 [data-md-color-primary=grey] .md-typeset a:hover{
     color: #a6ce39;
 }

@@ -12,8 +12,8 @@ pages:
     - 2. Set up the Sandbox: sandbox.md
     - 3. Read public info: read.md
     - 4. Search public info: search.md
-    - 5. COLLECT&#58; Get authenticated iDs &amp; permission: collect.md
-    - 6. CONNECT&#58; Add an affiliation: connect.md
+    - 5. Get authenticated iDs &amp; permission: collect.md
+    - 6. Add an affiliation: connect.md
     - 7. SYNCHRONIZE&#58; Update an affiliation: sync.md
     - 8. DISPLAY&#58; Presenting ORCID in your system: display.md
     - 9. RESOURCES: resources.md

@@ -12,9 +12,9 @@ Control over access to data in your ORCID record is one of [ORCID's core princpl
 * Read non-public data (items with privacy set to 'Trusted parties')
 * Add/update record data
 
-##Custom integration
+###Custom integration
 
-The most customizable way to get Authenticated iDs is by building your own API integration. In this section, we'll walk through the steps that your own custom integratio would need to complete in order to get an authenticated iD and record access permission.
+The most customizable way to get Authenticated iDs is by building your own API integration. In this section, we'll walk through the steps that your own custom integration would need to complete in order to get an authenticated iD and record access permission.
 
 **OAuth 2.0**
 
@@ -33,13 +33,13 @@ API credentials consisting of a **client ID** and a **client secret** are needed
 
 To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application)
 
-For this workshop, we'll use a set of demo credentials:
+For this tutorial, we'll use a set of demo credentials:
 
 ```
 client_id: APP-XA6KUTFCVQL0622C
 client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
 ```
-(Demo client secret created for this workshop - do not share API client secrets!)
+(Demo client secret created for this tutorial - do not share API client secrets!)
 
 
 ###Create an authorization URL
@@ -59,7 +59,7 @@ To kick off the OAuth process, we'll need to create an special authorization URL
 |**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes). | ```/authorize``` <br> ```/activities/update```
 |**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
-To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this workshop, our authorization URL will be:
+To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this tutorial, our authorization URL will be:
 
 ```
 https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground
@@ -79,7 +79,7 @@ https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&respons
 ###Exchange authorization code for access token & authenticated iD
 Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for.
 
-In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this workshop, we'll use Google OAuth Playground to simulate a web application.
+In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this tutorial, we'll use Google OAuth Playground to simulate a web application.
 
 1. Click the gear icon in the upper right corner to open the **OAuth 2.0 Configuration**<br>
 <img src="../images/04-3_google-playground-config.png" width="400" alt="Google OAuth Playground OAuth 2.0 Configuration" />
@@ -92,13 +92,15 @@ In a real-world situation, this exchange would be done by your system, using a p
 |**Authorization endpoint**| ```https://sandbox.orcid.org/oauth/authorize``` |
 |**Token endpoint**| ```https://sandbox.orcid.org/oauth/token``` |
 |**Access token location**| Authorization header w/Bearer prefix |
-|**OAuth Client ID**| ```APP-XA6KUTFCVQL0622C```<br>(Demo client ID created for this workshop) |
-|**OAuth Client Secret**| ```7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c```<br>(Demo client secret created for this workshop - do not share API client secrets!) |
+|**OAuth Client ID**| ```APP-XA6KUTFCVQL0622C```<br>(Demo client ID created for this tutorial) |
+|**OAuth Client Secret**| ```7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c```<br>(Demo client secret created for this tutorial - do not share API client secrets!) |
 
 3. In the **Step 2 Exchange authorization code for tokens** section at left, click **Exchange authorization code for tokens**<br>
 <img src="../images/04-3_exchange-code.png" width="400" alt="Google OAuth Playground exchanging authorization code for access token" />
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
-<img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" />
+<img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" /> <!--update with XML-->
+
+Once you have gone through this process once and you have the token this is all that you need to do further api calls for this ORCID and for these permissions. If you want to make calls for another ORCID or you want to write to a record where before you have only read for example, then you will need to complete the process again and get a new token.
 
 ##Vendor systems
 

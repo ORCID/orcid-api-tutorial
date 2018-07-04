@@ -1,4 +1,10 @@
-/*a,
+
+h1,h2,h3,h4,{
+	color:#aecc54;
+
+}
+
+a,
 .md-typeset a,
 [data-md-color-primary=grey] .md-typeset a {
     color: #338caf;
@@ -13,6 +19,10 @@ a:hover,
     color: #a6ce39;
 }
 
+.md-header{
+	background-color: grey;
+}
+
 img {
     border: 1px solid #eee;
     margin: .5em;
@@ -23,4 +33,3 @@ nav img {
     border: none;
     margin: 0;
 }
-*/
