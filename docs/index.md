@@ -1,4 +1,4 @@
-##Why are we here?
+##About ORCID
 
 ORCID provides an identifier for researchers _AND_ tools (like APIs) to help make connections between researchers, their contributions, and affiliations. **Why?** To help people find information, and to simplify reporting and analysis.
 
@@ -22,6 +22,23 @@ In this tutorial you will learn:
  * How to read and search information from the public API
  * What a Client ID and Client Secret is and how to use them
  * How to get an access token using the mysterious three legged OAuth process
+
+
+##Pre-requisites
+ To complete this tutorial, you'll need the following tools:
+
+ * **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
+ * **Internet connection**
+ * **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
+ * **Software capable of making HTTP requests:**
+
+ Examples in this doc use [Google OAuth Playground](https://developers.google.com/oauthplayground/)
+
+ You can also use
+ 		- [cURL](http://curl.haxx.se/download.html): Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions;   accessible within Terminal application)
+     - Or other online tools, like [hurl.it](http://hurl.it">hurl.it)
+
+ Once you have got to grips with the APIs you can use our [Swagger](https://pub.sandbox.orcid.org/v2.0/) graphical interface.
 
 
 ##About the ORCID APIs
@@ -49,15 +66,3 @@ All of the ORCID APIs are  based on the same set of technologies:
 * **XML/JSON:** ORCID APIs support data exchange in either XML or JSON format.
 
 [Learn more about the ORCID APIs](https://members.orcid.org/api/about-orcid-apis)
-
-##Pre-requisites
-To complete this tutorial, you'll need the following tools:
-
-* **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
-* **Internet connection**
-* **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
-* **Software capable of making HTTP requests:**
-    - [cURL](http://curl.haxx.se/download.html): Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions; accessible within Terminal application)
-    - Online tools, like [Google OAuth Playground](https://developers.google.com/oauthplayground/) or [hurl.it](http://hurl.it">hurl.it)
-
-Examples in this doc use [Google OAuth Playground](https://developers.google.com/oauthplayground/)

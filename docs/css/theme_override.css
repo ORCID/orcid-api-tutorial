@@ -1,6 +1,7 @@
 
-h1,h2,h3,h4,{
-	color:#aecc54;
+.md-typeset h1, h2, h3, h4{
+	color:#aecc54 !important;
+	font-weight: 500 !important;
 
 }
 
