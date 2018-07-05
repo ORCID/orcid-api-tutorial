@@ -1,3 +1,10 @@
+
+.md-typeset h1, h2, h3, h4{
+	color:#aecc54 !important;
+	font-weight: 500 !important;
+
+}
+
 a,
 .md-typeset a,
 [data-md-color-primary=grey] .md-typeset a {
@@ -6,11 +13,15 @@ a,
 
 a:focus,
 a:hover,
-.md-nav__link:focus, 
-.md-nav__link:hover, 
+.md-nav__link:focus,
+.md-nav__link:hover,
 [data-md-color-primary=grey] .md-typeset a:focus,
 [data-md-color-primary=grey] .md-typeset a:hover{
     color: #a6ce39;
+}
+
+.md-header{
+	background-color: grey;
 }
 
 img {

@@ -1,4 +1,4 @@
-##Why are we here?
+##About ORCID
 
 ORCID provides an identifier for researchers _AND_ tools (like APIs) to help make connections between researchers, their contributions, and affiliations. **Why?** To help people find information, and to simplify reporting and analysis.
 
@@ -9,22 +9,36 @@ ORCID wants to help make it possible to do things like:
 * Get (nearly) real-time data about researchers’ publications and grants
 * Find the current affiliation(s) of any researcher
 
-ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential. 
+ORCID can't do this on its own - integrations with other systems (like manuscript submission/production, funding application, repository, research information, and directory systems) are essential.
 
-This workshop provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
+##About this tutorial
 
-##Collect & Connect
-A top-notch ORCID integration includes the following capabilities:
+This tutorial provides an introduction to integrating ORCID into your systems, so that, together, we can help everyone involved in research spend more time *making* contributions and less time *managing* them!
 
-<img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> **Collect** authenticated ORCID iDs
+In this tutorial you will learn:
 
-<img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> **Connect** Get data from ORCID/add data to ORCID
+ * The types of ORCID APIs and what you can do with them
+ * How to get set up with the ORCID sandbox to test your API integration
+ * How to read and search information from the public API
+ * What a Client ID and Client Secret is and how to use them
+ * How to get an access token using the mysterious three legged OAuth process
 
-<img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> **Synchronize** Get data from ORCID/add data to ORCID on an ongoing basis 
 
-<img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> **Display** iDs you’ve collected in your own system
+##Pre-requisites
+ To complete this tutorial, you'll need the following tools:
 
-[Learn more about these integration steps](https://members.orcid.org/)
+ * **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
+ * **Internet connection**
+ * **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
+ * **Software capable of making HTTP requests:**
+
+ Examples in this doc use [Google OAuth Playground](https://developers.google.com/oauthplayground/)
+
+ You can also use
+ 		- [cURL](http://curl.haxx.se/download.html): Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions;   accessible within Terminal application)
+     - Or other online tools, like [hurl.it](http://hurl.it">hurl.it)
+
+ Once you have got to grips with the APIs you can use our [Swagger](https://pub.sandbox.orcid.org/v2.0/) graphical interface.
 
 
 ##About the ORCID APIs
@@ -32,13 +46,18 @@ ORCID's web interface gives researchers a way to interact with their record, but
 
 * **Public API:** Free to anyone with an ORCID iD
 * **Member API:** Available to ORCID member organizations (Sandbox Member API freely available for testing)
+* **Premium Member API** Available to ORCID premium member organizations (Sandbox Member API freely available for testing)
 
-| Features       | Public API | Member API |
-| -------------- | ---------- | ---------- |
-|**COLLECT**<br>Get authenticated ORCID iDs| <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> | <img src="images/Collect_4PP.png" class="icon" width="28" alt="ORCID Collect icon"/> |
-|**CONNECT**<br>Get data from ORCID/add data to ORCID| *Get public data only<br>(can't add data)* | <img src="images/Connect_4PP.png" class="icon" width="28" alt="ORCID Connect icon"/> |
-|**SYNCHRONIZE**<br>Get data from ORCID/add data to ORCID on an ongoing basis| *Get public data only<br>(can't add data)* | <img src="images/Synchronize_4PP.png" class="icon" width="28" alt="ORCID Synchronize icon"/> |
-|**DISPLAY**<br>Show iDs you’ve collected in your own system| <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> | <img src="images/Display_4PP.png" class="icon" width="28" alt="ORCID Display icon"/> |
+| Features       | Public API | Member API |Premium Member API |
+| -------------- | ---------- | ---------- | ----------------- |
+Authenticate: Get a user’s authenticated ORCID iD|yes|yes|yes|
+Read (Public): Read public data on ORCID records|yes|yes|yes|
+Create: Help researchers register for an ORCID iD using our create-on-demand process |yes|yes|yes|
+Read (Limited): Read limited-access data on ORCID records|no|yes|yes|
+Add: Post new items to a record|no|yes|yes|
+Update: Edit or delete items you previously added|no|yes|yes|
+Integration (using client credentials)|no|yes one only|yes up to five|
+Webhooks: Receive notifications of updates to your users' ORCID records|no|no|yes|
 
 All of the ORCID APIs are  based on the same set of technologies:
 
@@ -47,15 +66,3 @@ All of the ORCID APIs are  based on the same set of technologies:
 * **XML/JSON:** ORCID APIs support data exchange in either XML or JSON format.
 
 [Learn more about the ORCID APIs](https://members.orcid.org/api/about-orcid-apis)
-
-##Pre-requisites
-To complete this tutorial, you'll need the following tools:
-
-* **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
-* **Internet connection**
-* **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
-* **Software capable of making HTTP requests:**
-    - [cURL](http://curl.haxx.se/download.html): Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions; accessible within Terminal application)
-    - Online tools, like [Google OAuth Playground](https://developers.google.com/oauthplayground/) or [hurl.it](http://hurl.it">hurl.it)
-
-Examples in this doc use [Google OAuth Playground](https://developers.google.com/oauthplayground/)

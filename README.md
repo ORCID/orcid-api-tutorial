@@ -1,5 +1,5 @@
 # orcid-api-tutorial
-MkDocs version of ORCID API workshop materials
+MkDocs version of ORCID API tutorial materials
 
 ## Pre-requisites
 * [Python](https://www.python.org) 2.6 or higher
@@ -11,7 +11,7 @@ MkDocs version of ORCID API workshop materials
 
         cd ~/git
         git clone git@github.com:ORCID/orcid-api-tutorial.git
-  
+
 2. Start local server
 
         cd orcid-api-tutorial
@@ -26,7 +26,7 @@ Pushes code to gh-pages branch per http://www.mkdocs.org/user-guide/deploying-yo
 1. cd to local project directory
 
         cd ~/git/orcid-api-tutorial
-  
+
 2. Make sure you're on the master branch
 
         git checkout master

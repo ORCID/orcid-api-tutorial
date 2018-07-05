@@ -1,20 +1,20 @@
 site_name: Hands-on with the ORCID API
 theme: material
-extra_css: 
-    - css/theme_override.css
+extra_css: [css/theme_override.css]
 extra:
   palette:
     primary: 'grey'
   font:
     text: 'Noto Sans'
-  logo: 'images/id-icon.svg' 
+  logo: 'images/id-icon.svg'
 pages:
     - 1. Introduction: index.md
     - 2. Set up the Sandbox: sandbox.md
-    - 3. Read public info: read.md
-    - 4. Search public info: search.md
-    - 5. COLLECT&#58; Get authenticated iDs &amp; permission: collect.md
-    - 6. CONNECT&#58; Add an affiliation: connect.md
-    - 7. SYNCHRONIZE&#58; Update an affiliation: sync.md
+    - 3. READ&#58; public info: read.md
+    - 4. SEARCH&#58; public info: search.md
+    - 5. GET&#58; authenticated iDs &amp; permission: collect.md
+    - 6. POST&#58; an affiliation: connect.md
+    - 7. PUT&#58; Update an affiliation: sync.md
     - 8. DISPLAY&#58; Presenting ORCID in your system: display.md
     - 9. RESOURCES: resources.md
+    - 10. Vendor and Institutional Sign In: Vendor_Institution.md

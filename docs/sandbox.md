@@ -1,4 +1,4 @@
-For this workshop, we'll use ORCID's test environment, the [ORCID Sandbox](https://sandbox.orcid.org/signin). The Sandbox works just like the production ORCID Registry, with a few exceptions:
+For this tutorial, we'll use ORCID's test environment, the [ORCID Sandbox](https://sandbox.orcid.org/signin). The Sandbox works just like the production ORCID Registry, with a few exceptions:
 
 * Sandbox only sends emails to [mailinator.com](https://www.mailinator.com/) addresses 
 * Import wizard tools don't work in the Sandbox
