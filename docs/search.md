@@ -1,6 +1,6 @@
 In addition to reading information on a specific ORCID record, you can use the API to search for ORCID records that contain specific information.
 
-In this section, we'll try searches using just a few of the available fields. For a full list of fields that you can search, see our [Basic tutorial: Searching Data using the ORCID API](https://members.orcid.org/api/tutorial/search-orcid-registry)
+In this section, we'll try searches using just a few of the available fields. For a full list of fields that you can search, see our Github tutorial: [Search for public information on ORCID records](https://github.com/ORCID/ORCID-Source/blob/master/orcid-api-web/tutorial/search.md)
 
 ##Search for records with an institutional affiliation
 1. In a new window or tab, visit [https://developers.google.com/oauthplayground](https://developers.google.com/oauthplayground)
