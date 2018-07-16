@@ -27,7 +27,7 @@ In this tutorial you will learn:
 ##Pre-requisites
  To complete this tutorial, you'll need the following tools:
 
- * **Web browser:** Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)
+ * **Web browser:** ([that's up to date](https://support.orcid.org/knowledgebase/articles/1804765-technical-requirements-for-using-the-orcid-site))
  * **Internet connection**
  * **Plain text editor:** TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor
  * **Software capable of making HTTP requests:**
@@ -45,7 +45,7 @@ In this tutorial you will learn:
 ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).
 
 * **Public API:** Free to anyone with an ORCID iD
-* **Member API:** Available to ORCID member organizations (Sandbox Member API freely available for testing)
+* **Member API:** Available to ORCID [member organizations](https://orcid.org/about/membership) (Sandbox Member API freely available for testing)
 * **Premium Member API** Available to ORCID premium member organizations (Sandbox Member API freely available for testing)
 
 | Features       | Public API | Member API |Premium Member API |

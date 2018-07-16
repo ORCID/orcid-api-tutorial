@@ -2,7 +2,7 @@ In our first few API requests, we already knew which ORCID iD to use (our own!) 
 
 **Authenticated iDs**
 
-ORCID is about disambiguation,it's important that you get the correct iD for each researcher. The best way to do this is to collect **Authenticated ORCID iDs**, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. [Learn more about Authenticated iDs](https://orcid.org/blog/2017/02/20/whats-so-special-about-signing)
+ORCID is about disambiguation, it's important that you get the correct iD for each researcher. The best way to do this is to collect **Authenticated ORCID iDs**, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. [Learn more about Authenticated iDs](https://orcid.org/blog/2017/02/20/whats-so-special-about-signing)
 
 **Record access permission**
 
@@ -43,7 +43,7 @@ client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
 
 
 ###Create an authorization URL
-To kick off the OAuth process, we'll need to create an special authorization URL that sends users to an ORCID sign-in screen. This URL consists of **Authorization endpoint**, plus **Parameters** that identify your organization and the permissions you want to request.
+To kick off the OAuth process, we'll need to create a special authorization URL that sends users to an ORCID sign-in screen. This URL consists of **Authorization endpoint**, plus **Parameters** that identify your organization and the permissions you want to request.
 
 **Authorization endpoint (Sandbox)**
 
