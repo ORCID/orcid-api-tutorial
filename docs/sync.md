@@ -22,7 +22,7 @@ In a real-world situation, you may need to update a researcher's affiliation. In
 6. Click **Send the Request**.
 7. The  results will appear in the **Request/Response** section at right. Scroll to the bottom – if you see **HTTP/1.1 200 OK**, your education affiliation was successfully updated! If you see an error message, check that the header values in **Add headers** have not been changed to garbled text, ex: ```application%2Fvnd.orcid%2Bxml"```<br>
 <img src="../images/06-2_put-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation PUT request" />
-8. Visit the **public  view** of your Sandbox record at ```http://sandbox.orcid.org/[ORCID ID]``` to see your updated education affiliation.<br>
+8. Visit the **public  view** of your Sandbox record at ```https://sandbox.orcid.org/[ORCID ID]``` to see your updated education affiliation.<br>
 <img src="../images/06-2_updated-affiliation.png" width="600" alt="ORCID record with updated education affiliation item" /><br>
 
 ##Affiliation end date XML

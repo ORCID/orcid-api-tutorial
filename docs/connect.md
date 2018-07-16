@@ -1,4 +1,4 @@
-Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.
+Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update activities). In this section, we'll add an education affiliation to our Sandbox record.
 
 ##Add an education affiliation
 Still have that Google OAuth Playground window open? If so, continue with step 1 below. If not, go back and repeat the [Get an authorization code](/collect/#get-an-authorization-code) and [Exchange authorization code for an access token](/collect/#exchange-authorization-code-for-access-token-authenticated-id) steps from the previous section before moving on to the steps below.
@@ -26,7 +26,7 @@ Still have that Google OAuth Playground window open? If so, continue with step 1
 11. Click **Send the  request**.
 12. The  results will appear in the **Request/Response** section at right. Scroll to the bottom – if you see **HTTP/1.1 201 Created**, your education affiliation was successfully added!<br>
 <img src="../images/06-1_post-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation POST request" />
-13. Visit the public view of your Sandbox record at ```http://sandbox.orcid.org/[ORCID ID]``` to see your new education affiliation.<br>
+13. Visit the public view of your Sandbox record at ```https://sandbox.orcid.org/[ORCID ID]``` to see your new education affiliation.<br>
 <img src="../images/06-1_new-affiliation.png" width="600" alt="ORCID record with new education affiliation item added" /><br>
 *Notice that **Source** shows the name of the API client that added the affiliation - this is a key element that helps other systems consuming ORCID data determine whether this piece of information is authoritative.**
 
