@@ -13,10 +13,10 @@ pages:
     - 1. Introduction: index.md
     - 2. Set up the Sandbox: sandbox.md
     - 3. READ&#58; public info: read.md
-    - 4. SEARCH&#58; public info: search.md
-    - 5. GET&#58; authenticated iDs &amp; permission: collect.md
-    - 6. POST&#58; an affiliation: connect.md
-    - 7. PUT&#58; Update an affiliation: sync.md
-    - 8. DISPLAY&#58; Presenting ORCID in your system: display.md
+    - 4. GET&#58; authenticated iDs &amp; permission: get.md
+    - 5. POST&#58; an affiliation: post.md
+    - 6. PUT&#58; Update an affiliation: put.md
+    - 7. DISPLAY&#58; Presenting ORCID in your system: display.md
+    - 8. SEARCH&#58; public info: search.md
     - 9. RESOURCES: resources.md
     - 10. Vendor and Institutional Sign In: Vendor_Institution.md

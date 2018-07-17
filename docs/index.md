@@ -56,7 +56,7 @@ Create: Help researchers register for an ORCID iD using our create-on-demand pro
 Read (Limited): Read limited-access data on ORCID records|no|yes|yes|
 Add: Post new items to a record|no|yes|yes|
 Update: Edit or delete items you previously added|no|yes|yes|
-Integration (using client credentials)|no|yes one only|yes up to five|
+Integration with you system using an API client |no|yes one only|yes up to five|
 Webhooks: Receive notifications of updates to your users' ORCID records|no|no|yes|
 
 All of the ORCID APIs are  based on the same set of technologies:
