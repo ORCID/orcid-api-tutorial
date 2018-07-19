@@ -21,5 +21,5 @@ To get more information about a specific item on an ORCID record, you can retrie
 *Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX and [PUT CODE] with the put-code for your employment item*<br>
 <img src="../images/02-2_request-employment.png" width="400" alt="Google OAuth Playground request for an employment item on an ORCID record" />
 4. Click **Send the request**
-5. Fulls details of your employment entry will appear in the **Request/Response** section<br>
+5. Full details of your employment entry will appear in the **Request/Response** section<br>
 <img src="../images/02-2_response-employment.png" width="600" alt="Google OAuth Playground response an employment item on an ORCID record" />
