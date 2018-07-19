@@ -36,7 +36,7 @@
     
     
       
-        <title>6. POST&#58; an affiliation - Hands-on with the ORCID API</title>
+        <title>5. POST&#58; an affiliation - Hands-on with the ORCID API</title>
       
     
     
@@ -99,7 +99,7 @@
                 Hands-on with the ORCID API
               </span>
               <span class="md-header-nav__topic">
-                6. POST&#58; an affiliation
+                5. POST&#58; an affiliation
               </span>
             
           
@@ -206,20 +206,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../search/" title="4. SEARCH&#58; public info" class="md-nav__link">
-      4. SEARCH&#58; public info
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../collect/" title="5. GET&#58; authenticated iDs &amp; permission" class="md-nav__link">
-      5. GET&#58; authenticated iDs &amp; permission
+    <a href="../get/" title="4. GET&#58; authenticated iDs &amp; permission" class="md-nav__link">
+      4. GET&#58; authenticated iDs &amp; permission
     </a>
   </li>
 
@@ -237,11 +225,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        6. POST&#58; an affiliation
+        5. POST&#58; an affiliation
       </label>
     
-    <a href="./" title="6. POST&#58; an affiliation" class="md-nav__link md-nav__link--active">
-      6. POST&#58; an affiliation
+    <a href="./" title="5. POST&#58; an affiliation" class="md-nav__link md-nav__link--active">
+      5. POST&#58; an affiliation
     </a>
     
       
@@ -283,8 +271,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../sync/" title="7. PUT&#58; Update an affiliation" class="md-nav__link">
-      7. PUT&#58; Update an affiliation
+    <a href="../put/" title="6. PUT&#58; Update an affiliation" class="md-nav__link">
+      6. PUT&#58; Update an affiliation
     </a>
   </li>
 
@@ -295,8 +283,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../display/" title="8. DISPLAY&#58; Presenting ORCID in your system" class="md-nav__link">
-      8. DISPLAY&#58; Presenting ORCID in your system
+    <a href="../display/" title="7. DISPLAY&#58; Presenting ORCID in your system" class="md-nav__link">
+      7. DISPLAY&#58; Presenting ORCID in your system
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../search/" title="8. SEARCH&#58; public info" class="md-nav__link">
+      8. SEARCH&#58; public info
     </a>
   </li>
 
@@ -374,9 +374,9 @@
               
                 
                 
-                  <h1>6. POST&#58; an affiliation</h1>
+                  <h1>5. POST&#58; an affiliation</h1>
                 
-                <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update Activities). In this section, we'll add an education affiliation to our Sandbox record.</p>
+                <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update activities). In this section, we'll add an education affiliation to our Sandbox record.</p>
 <h2 id="add-an-education-affiliation">Add an education affiliation</h2>
 <p>Still have that Google OAuth Playground window open? If so, continue with step 1 below. If not, go back and repeat the <a href="../collect/#get-an-authorization-code">Get an authorization code</a> and <a href="../collect/#exchange-authorization-code-for-access-token-authenticated-id">Exchange authorization code for an access token</a> steps from the previous section before moving on to the steps below.</p>
 <ol>
@@ -405,7 +405,7 @@
 <li>Click <strong>Send the  request</strong>.</li>
 <li>The  results will appear in the <strong>Request/Response</strong> section at right. Scroll to the bottom – if you see <strong>HTTP/1.1 201 Created</strong>, your education affiliation was successfully added!<br>
 <img src="../images/06-1_post-affiliation-response.png" width="600" alt="Google OAuth Playground response for successful education affiliation POST request" /></li>
-<li>Visit the public view of your Sandbox record at <code>http://sandbox.orcid.org/[ORCID ID]</code> to see your new education affiliation.<br>
+<li>Visit the public view of your Sandbox record at <code>https://sandbox.orcid.org/[ORCID ID]</code> to see your new education affiliation.<br>
 <img src="../images/06-1_new-affiliation.png" width="600" alt="ORCID record with new education affiliation item added" /><br>
 <em>Notice that <strong>Source</strong> shows the name of the API client that added the affiliation - this is a key element that helps other systems consuming ORCID data determine whether this piece of information is authoritative.</em>*</li>
 </ol>
@@ -456,7 +456,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../collect/" title="5. GET&#58; authenticated iDs &amp; permission" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../get/" title="4. GET&#58; authenticated iDs &amp; permission" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -465,19 +465,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                5. GET&#58; authenticated iDs &amp; permission
+                4. GET&#58; authenticated iDs &amp; permission
               </span>
             </div>
           </a>
         
         
-          <a href="../sync/" title="7. PUT&#58; Update an affiliation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../put/" title="6. PUT&#58; Update an affiliation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                7. PUT&#58; Update an affiliation
+                6. PUT&#58; Update an affiliation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
