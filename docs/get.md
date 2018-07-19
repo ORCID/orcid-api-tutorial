@@ -62,13 +62,13 @@ To kick off the OAuth process, we'll need to create a special authorization URL 
 To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this tutorial, our authorization URL will be:
 
 ```
-https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground
+https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground
 ```
 
 ###Get an authorization Code
 
 1. In a new window or tab, visit<br>
-[https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/activities/update&redirect_uri=https://developers.google.com/oauthplayground)
+[https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground)
 
 2. An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click **Authorize**<br>
 <img src="../images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" />
