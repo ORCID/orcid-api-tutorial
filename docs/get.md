@@ -65,8 +65,11 @@ https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&respo
 
 ###Get an authorization Code
 
-1. In a new window or tab, visit remebering to fill in your own APP<br>
-[https://sandbox.orcid.org/oauth/authorize?client_id=[APP-*****************]&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=[APP-*****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground)
+1. Copy the below URL, remembering to fill in your own APP details and paste into a new tab.<br>
+
+```
+https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground
+```
 
 2. An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click **Authorize**<br>
 <img src="../images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" />

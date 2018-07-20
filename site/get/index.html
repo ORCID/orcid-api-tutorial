@@ -453,12 +453,9 @@
 </ol>
 <h3 id="get-api-credentials">Get API credentials</h3>
 <p>API credentials consisting of a <strong>client ID</strong> and a <strong>client secret</strong> are needed in order to get Authenticated iDs and/or user permissions.</p>
-<p>To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. To request API credentials, see <a href="https://orcid.org/content/register-client-application">Request API credentials</a></p>
-<p>For this tutorial, we'll use a set of demo credentials:</p>
-<pre><code>client_id: APP-XA6KUTFCVQL0622C
-client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
-</code></pre>
-
+<p>To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials.</p>
+<p>For this tutorial, please use your own sandbox API credentials:</p>
+<p>To request API credentials, see <a href="https://orcid.org/content/register-client-application">Request API credentials</a></p>
 <p>(Demo client secret created for this tutorial - do not share API client secrets!)</p>
 <h3 id="create-an-authorization-url">Create an authorization URL</h3>
 <p>To kick off the OAuth process, we'll need to create a special authorization URL that sends users to an ORCID sign-in screen. This URL consists of <strong>Authorization endpoint</strong>, plus <strong>Parameters</strong> that identify your organization and the permissions you want to request.</p>
@@ -477,7 +474,7 @@ client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
 <tr>
 <td><strong>client_id</strong></td>
 <td>Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see <a href="https://orcid.org/content/register-client-application">Request API credentials</a></td>
-<td><code>APP-XA6KUTFCVQL0622C</code></td>
+<td><code>[APP-*****************]</code></td>
 </tr>
 <tr>
 <td><strong>response_type</strong></td>
@@ -496,15 +493,16 @@ client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
 </tr>
 </tbody>
 </table>
-<p>To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this tutorial, our authorization URL will be:</p>
-<pre><code>https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&amp;response_type=code&amp;scope=/read-limited&amp;redirect_uri=https://developers.google.com/oauthplayground
+<p>To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
+Enter you own client ID where it says [APP-<strong><em>*</em></strong><strong><em>*</em></strong>***]</p>
+<pre><code>https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&amp;response_type=code&amp;scope=/read-limited%20/activities/update%20/person/update&amp;redirect_uri=https://developers.google.com/oauthplayground
 </code></pre>
 
 <h3 id="get-an-authorization-code">Get an authorization Code</h3>
 <ol>
 <li>
-<p>In a new window or tab, visit<br>
-<a href="https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&amp;response_type=code&amp;scope=/read-limited&amp;redirect_uri=https://developers.google.com/oauthplayground">https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&amp;response_type=code&amp;scope=/read-limited&amp;redirect_uri=https://developers.google.com/oauthplayground</a></p>
+<p>In a new window or tab, visit remebering to fill in your own APP<br>
+<a href="https://sandbox.orcid.org/oauth/authorize?client_id=[APP-*****************]&amp;response_type=code&amp;scope=/read-limited%20/activities/update%20/person/update&amp;redirect_uri=https://developers.google.com/oauthplayground">https://sandbox.orcid.org/oauth/authorize?client_id=[APP-<strong><em>*</em></strong><strong><em>*</em></strong>***]&amp;response_type=code&amp;scope=/read-limited&amp;redirect_uri=https://developers.google.com/oauthplayground</a></p>
 </li>
 <li>
 <p>An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click <strong>Authorize</strong><br>
@@ -552,11 +550,11 @@ client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
 </tr>
 <tr>
 <td><strong>OAuth Client ID</strong></td>
-<td><code>APP-XA6KUTFCVQL0622C</code><br>(Demo client ID created for this tutorial)</td>
+<td><code>[APP-*****************]</code><br>(Demo client ID created for this tutorial)</td>
 </tr>
 <tr>
 <td><strong>OAuth Client Secret</strong></td>
-<td><code>7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c</code><br>(Demo client secret created for this tutorial - do not share API client secrets!)</td>
+<td><code>0000000-0000-0000-0000-000000000000</code><br>(Your own client secret created earlier - do not share API client secrets!)</td>
 </tr>
 </tbody>
 </table>
