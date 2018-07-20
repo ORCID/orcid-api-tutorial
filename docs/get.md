@@ -37,8 +37,7 @@ For this tutorial, please use your own sandbox API credentials:
 
 To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application)
 
-(Demo client secret created for this tutorial - do not share API client secrets!)
-
+## Three Step OAuth journey
 
 ###Create an authorization URL
 To kick off the OAuth process, we'll need to create a special authorization URL that sends users to an ORCID sign-in screen. This URL consists of **Authorization endpoint**, plus **Parameters** that identify your organization and the permissions you want to request.
