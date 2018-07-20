@@ -31,14 +31,12 @@ If you've ever signed into a site using Google or Facebook instead of your crede
 ###Get API credentials
 API credentials consisting of a **client ID** and a **client secret** are needed in order to get Authenticated iDs and/or user permissions.
 
-To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application)
+To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials.
 
-For this tutorial, we'll use a set of demo credentials:
+For this tutorial, please use your own sandbox API credentials:
 
-```
-client_id: APP-XA6KUTFCVQL0622C
-client_secret: 7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c
-```
+To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application)
+
 (Demo client secret created for this tutorial - do not share API client secrets!)
 
 
@@ -54,21 +52,21 @@ To kick off the OAuth process, we'll need to create a special authorization URL 
 
 | Parameter | Description | Example |
 | ----------| ----------- | ------- |
-|**client_id**| Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application) | ```APP-XA6KUTFCVQL0622C``` |
+|**client_id**| Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application) | ```[APP-*****************]``` |
 |**response_type**|  | ```code``` |
 |**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes). | ```/authorize``` <br> ```/activities/update```
 |**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
-To request permission to add/update activities (affiliations, funding, works, peer review items) using a demo client ID created for this tutorial, our authorization URL will be:
-
+To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
+Enter you own client ID where it says [APP-*****************]
 ```
-https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground
+https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground
 ```
 
 ###Get an authorization Code
 
-1. In a new window or tab, visit<br>
-[https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=APP-XA6KUTFCVQL0622C&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground)
+1. In a new window or tab, visit remebering to fill in your own APP<br>
+[https://sandbox.orcid.org/oauth/authorize?client_id=[APP-*****************]&response_type=code&scope=/read-limited&redirect_uri=https://developers.google.com/oauthplayground](https://sandbox.orcid.org/oauth/authorize?client_id=[APP-*****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground)
 
 2. An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click **Authorize**<br>
 <img src="../images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" />
@@ -92,8 +90,8 @@ In a real-world situation, this exchange would be done by your system, using a p
 |**Authorization endpoint**| ```https://sandbox.orcid.org/oauth/authorize``` |
 |**Token endpoint**| ```https://sandbox.orcid.org/oauth/token``` |
 |**Access token location**| Authorization header w/Bearer prefix |
-|**OAuth Client ID**| ```APP-XA6KUTFCVQL0622C```<br>(Demo client ID created for this tutorial) |
-|**OAuth Client Secret**| ```7c8d6b1b-401b-4f5d-9b8b-b8108c6e197c```<br>(Demo client secret created for this tutorial - do not share API client secrets!) |
+|**OAuth Client ID**| ```[APP-*****************]```<br>(Demo client ID created for this tutorial) |
+|**OAuth Client Secret**| ```0000000-0000-0000-0000-000000000000```<br>(Your own client secret created earlier - do not share API client secrets!) |
 
 3. In the **Step 2 Exchange authorization code for tokens** section at left, click **Exchange authorization code for tokens**<br>
 <img src="../images/04-3_exchange-code.png" width="400" alt="Google OAuth Playground exchanging authorization code for access token" />
