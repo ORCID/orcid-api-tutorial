@@ -11,7 +11,7 @@ Configuration steps and customization options vary widely between systems - chec
 
 ##Institutional sign-in
 
-You can enable access using institutional credentials. Check out the (Members Documentation)[http://members.orcid.org/api/integrate/institution-sign-in] for more information.
+You can enable access using institutional credentials. Check out the [Members Documentation](http://members.orcid.org/api/integrate/institution-sign-in) for more information.
 
 
 ##Share my iD

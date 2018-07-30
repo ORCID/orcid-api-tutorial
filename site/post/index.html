@@ -319,8 +319,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vendor_Institution/" title="10. Vendor and Institutional Sign In" class="md-nav__link">
-      10. Vendor and Institutional Sign In
+    <a href="../Other_methods_for_getting_authorised_iDs/" title="10. Other methods for getting authorised iDs" class="md-nav__link">
+      10. Other methods for getting authorised iDs
     </a>
   </li>
 
@@ -376,7 +376,8 @@
                 
                   <h1>5. POST&#58; an affiliation</h1>
                 
-                <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for (in this case, to update activities). In this section, we'll add an education affiliation to our Sandbox record.</p>
+                <p>Now that we've got an Access Token, we can use it like a password to take the API actions we requested permission for.</p>
+<p>In this section, we'll add an education affiliation to our Sandbox record. You can use the API to, POST (add), PUT (update), DELETE, or read any section of the record, the only things you need to change are the endpoints and the XML for each section. In the following example we are using the /education endpoint with the <a href="https://github.com/ORCID/ORCID-Source/blob/master/orcid-model/src/main/resources/record_2.1/samples/write_sample/education-2.1.xml">correct XML</a> to add the information, but you can just as well add Employment or Works for example. See our <a href="https://github.com/ORCID/ORCID-Source/blob/master/orcid-model/src/main/resources/record_2.1/README.md">Github documentation</a> for more example files and endpoints and the permissions you need for each.</p>
 <h2 id="add-an-education-affiliation">Add an education affiliation</h2>
 <p>Still have that Google OAuth Playground window open? If so, continue with step 1 below. If not, go back and repeat the <a href="../collect/#get-an-authorization-code">Get an authorization code</a> and <a href="../collect/#exchange-authorization-code-for-access-token-authenticated-id">Exchange authorization code for an access token</a> steps from the previous section before moving on to the steps below.</p>
 <ol>
@@ -400,7 +401,7 @@
 <li>Copy the education affiliation XML at the end of this section and paste it into the <strong>Request Body</strong> text box<br>
 <img src="../images/06-1_request-body.png" width="600" alt="Google OAuth Playground Request Body configuration for new education affiliation" /></li>
 <li><strong>OPTIONAL:</strong> In the <strong>Request Body</strong> text box, edit the XML to reflect your institution.<br>
-<em>For <code>&lt;disambiguated-organization-identifier&gt;</code>, use the <a href="http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=1">Ringgold Identify database</a> to find the Ringgold ID for your institution (you'll need to <a href="http://ido.ringgold.com/identify_new/cfm/si_pd.cfm?PID=24">register a free Ringgold account</a> in order to search the database).</em></li>
+<em>For <code>&lt;disambiguated-organization-identifier&gt;</code>, use the <a href="https://www.ringgold.com/identify/">Ringgold Identify database</a> to find the Ringgold ID for your institution (you'll need to <a href="https://ido.ringgold.com/register">register a free Ringgold account</a> in order to search the database).</em></li>
 <li>Click <strong>Close</strong>.</li>
 <li>Click <strong>Send the  request</strong>.</li>
 <li>The  results will appear in the <strong>Request/Response</strong> section at right. Scroll to the bottom – if you see <strong>HTTP/1.1 201 Created</strong>, your education affiliation was successfully added!<br>
@@ -414,7 +415,7 @@
 &lt;education:education
   xmlns:common=&quot;http://www.orcid.org/ns/common&quot; xmlns:education=&quot;http://www.orcid.org/ns/education&quot;
   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-  xsi:schemaLocation=&quot;http://www.orcid.org/ns/education ../education-2.0.xsd &quot;&gt; 
+  xsi:schemaLocation=&quot;http://www.orcid.org/ns/education ../education-2.0.xsd &quot;&gt;
   &lt;education:department-name&gt;Department&lt;/education:department-name&gt;
   &lt;education:role-title&gt;Degree title&lt;/education:role-title&gt;
   &lt;common:start-date&gt;
@@ -423,14 +424,14 @@
     &lt;common:day&gt;01&lt;/common:day&gt;
   &lt;/common:start-date&gt;
   &lt;education:organization&gt;
-    &lt;common:name&gt;My University&lt;/common:name&gt;
+    &lt;common:name&gt;ORCID&lt;/common:name&gt;
     &lt;common:address&gt;
-      &lt;common:city&gt;Some City&lt;/common:city&gt;
+      &lt;common:city&gt;Bethesda&lt;/common:city&gt;
       &lt;common:region&gt;Region&lt;/common:region&gt;
       &lt;common:country&gt;US&lt;/common:country&gt;
     &lt;/common:address&gt;
     &lt;common:disambiguated-organization&gt;
-      &lt;common:disambiguated-organization-identifier&gt;XXXXXX&lt;/common:disambiguated-organization-identifier&gt;
+      &lt;common:disambiguated-organization-identifier&gt;385488&lt;/common:disambiguated-organization-identifier&gt;
       &lt;common:disambiguation-source&gt;RINGGOLD&lt;/common:disambiguation-source&gt;
     &lt;/common:disambiguated-organization&gt;
   &lt;/education:organization&gt;     
