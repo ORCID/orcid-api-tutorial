@@ -36,7 +36,7 @@
     
     
       
-        <title>10. Vendor and Institutional Sign In - Hands-on with the ORCID API</title>
+        <title>10. Other methods for getting authorised iDs - Hands-on with the ORCID API</title>
       
     
     
@@ -99,7 +99,7 @@
                 Hands-on with the ORCID API
               </span>
               <span class="md-header-nav__topic">
-                10. Vendor and Institutional Sign In
+                10. Other methods for getting authorised iDs
               </span>
             
           
@@ -285,11 +285,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        10. Vendor and Institutional Sign In
+        10. Other methods for getting authorised iDs
       </label>
     
-    <a href="./" title="10. Vendor and Institutional Sign In" class="md-nav__link md-nav__link--active">
-      10. Vendor and Institutional Sign In
+    <a href="./" title="10. Other methods for getting authorised iDs" class="md-nav__link md-nav__link--active">
+      10. Other methods for getting authorised iDs
     </a>
     
       
@@ -318,33 +318,6 @@
   <a href="#institutional-sign-in" title="Institutional sign-in" class="md-nav__link">
     Institutional sign-in
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-api-credentials" title="Configure API credentials" class="md-nav__link">
-    Configure API credentials
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user-connect-your-institutional-account" title="(User) Connect your institutional account" class="md-nav__link">
-    (User) Connect your institutional account
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exchange-authorization-code-for-access-token-authenticated-id" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    Exchange authorization code for access token &amp; authenticated iD
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -423,33 +396,6 @@
     Institutional sign-in
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-api-credentials" title="Configure API credentials" class="md-nav__link">
-    Configure API credentials
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#user-connect-your-institutional-account" title="(User) Connect your institutional account" class="md-nav__link">
-    (User) Connect your institutional account
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exchange-authorization-code-for-access-token-authenticated-id" title="Exchange authorization code for access token &amp; authenticated iD" class="md-nav__link">
-    Exchange authorization code for access token &amp; authenticated iD
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -496,7 +442,7 @@
               
                 
                 
-                  <h1>10. Vendor and Institutional Sign In</h1>
+                  <h1>10. Other methods for getting authorised iDs</h1>
                 
                 <h2 id="other-methods-for-getting-authorised-ids">Other methods for getting authorised iDs</h2>
 <p>You have just followed a method a custom integration would use to get ORCIDs from users. The following</p>
@@ -504,39 +450,7 @@
 <p>Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of <a href="https://members.orcid.org/api/orcid-enabled-systems">ORCID-enabled systems</a> for more details.</p>
 <p>Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.</p>
 <h2 id="institutional-sign-in">Institutional sign-in</h2>
-<p>ORCID recently added the option to sign in using institutional credentials. Institutional sign-in is available to researchers affiliated with members of supported identity federations, currently <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> and <a href="https://technical.edugain.org/status.php">eduGAIN</a>.</p>
-<p>ORCID membership is not required in order for institutional sign-in to work for your researchers, however, ORCID members who are <a href="https://www.surf.nl/en/services-and-products/surfconext/index.html">SURFconext</a> or <a href="https://technical.edugain.org/status.php">eduGAIN</a> federation members can automatically request ORCID iDs and ORCID record access permission from users who sign into ORCID with their institutional credentials using the new Institutional Collect &amp; Connect feature.</p>
-<p>In this section, we'll take a look at this feature. <a href="https://members.orcid.org/api/integrate/institution-sign-in">Learn more about ORCID institutional signin, including configuring up your IdP</a></p>
-<h3 id="configure-api-credentials">Configure API credentials</h3>
-<p>In addition to getting Member API credentials as described above, ORCID will need a few more pieces of information to set up Institutional Collect &amp; Connect for your organization.</p>
-<p>To have your API credentials configured for Institutional Collect &amp; Connect, contact <a href="../support@orcid.org">support@orcid.org</a> with the following information:</p>
-<ul>
-<li>Client ID</li>
-<li>Identity provider entity ID (e.g. https://idp.example.org/idp/shibboleth)</li>
-<li>Redirect URI: The page on your site that users should be directed to after they complete the cross-link process. This can bedifferent from the redirect URI you use for other ORCID API applications.</li>
-<li>Permission scope(s) that you would like (<code>/authenticate</code>, <code>/read-limited</code>, <code>/activities/update</code>, <code>/person/update</code>)</li>
-</ul>
-<h3 id="user-connect-your-institutional-account">(User) Connect your institutional account</h3>
-<p><strong>Not a member of a supported federation?</strong> Test out ORCID institutional sign-in with a <a href="https://app.unitedid.org/signup">United ID</a> account. United ID is a free and independent online identity service <em>(Note: United ID requires use of a 2-Factor Authentication method, like <a href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>)</em>.</p>
-<ol>
-<li>Sign out of your Sandbox record - click the <strong>Sign out</strong> button in the upper right corner or visit <a href="https://sandbox.orcid.org/signout">https://sandbox.orcid.org/signout</a></li>
-<li>Visit <a href="https://sandbox.orcid.org/signin">https://sandbox.orcid.org/signin</a> and click <strong>Sign in using your Institutional Account</strong></li>
-<li>Enter your organization's name in the box, or choose to pick it from the list.
-  <img src="../images/04-3_signin-inst-account.png" width="400" alt="ORCID sign-in screen showing institutional account sign-in"></li>
-<li>Sign into your institution account<br>
-  <img src="../images/04-3_united-id-login.png" width="400" alt="United ID login screen"></li>
-<li>Finish linking your accounts by signing into ORCID with your ORCID username and password. Enter the email address / ORCID iD and password for your Sandbox account and click <strong>Sign into ORCID</strong>. <em>You will only need to complete this step once - in the future you can log directly into ORCID with your institutional account.</em><br>
-  <img src="../images/04-3_link-account.png" width="600" alt="ORCID link accounts screen"></li>
-<li>After linking your accounts, a message appears at the top of your ORCID record, prompting you to connect your iD to your institution. Click the <strong>Connect</strong> button.<br>
-  <img src="../images/04-3_inst-connect-banner.png" width="600" alt="ORCID record showing institution connect message" /></li>
-<li>An ORCID sign-in screen listing the requested permissions will appear; click <strong>Authorize</strong><br>
-  <img src="../images/04-3_inst-connect-oauth.png" width="400" alt="ORCID OAuth sign-in screen" /></li>
-<li>After granting permission, you'll be redirected to the Redirect URI specified for your API credentials - this page should show a success or error message depending on whether <strong>Authorize</strong> or <strong>Deny</strong> was clicked, and it should also provide a link back to ORCID and links to your local ORCID resources.<br>
-  <img src="../images/04-3_inst-connect-redirect.png" width="600" alt="Example success message shown to users after completing the institution connect process" /></li>
-</ol>
-<h3 id="exchange-authorization-code-for-access-token-authenticated-id">Exchange authorization code for access token &amp; authenticated iD</h3>
-<p>Like in section 4.1.4 above, an authorization code is attached to the end of the redirect URI, which can be exchanged for an access token and the user's ORCID iD.<br>
-  <img src="../images/04-3_inst-connect-auth-code.png" width="600" alt="Browser address bar showing OAuth authorization code" /></p>
+<p>You can enable access using institutional credentials. Check out the (Members Documentation)[http://members.orcid.org/api/integrate/institution-sign-in] for more information.</p>
 <h2 id="share-my-id">Share my iD</h2>
 <p>Need a quick way to collect authenticated iDs with no programming or IT resources needed?
 <a href="https://share-my-id.orcid.org/">Share my iD</a> is a new app from ORCID that allows anyone with an ORCID iD to get iDs from other ORCID users.<br>
