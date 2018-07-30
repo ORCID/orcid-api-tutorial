@@ -77,7 +77,7 @@ https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&respo
 <img src="../images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" />
 
 ###Exchange authorization code for access token & authenticated iD
-Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for.
+Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. You need to store this securely and privately as it contains access tokens, normally you would store this in a database, for now you can store it in a text file on your computer.
 
 In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this tutorial, we'll use Google OAuth Playground to simulate a web application.
 

@@ -36,7 +36,7 @@ In this tutorial you will learn:
 
  You can also use
  		- [cURL](http://curl.haxx.se/download.html): Free, command-line application available for Mac  or Windows (pre-installed on most Mac OS versions;   accessible within Terminal application)
-     - Or other online tools, like [hurl.it](http://hurl.it">hurl.it)
+     - Or other online tools, like [Insomnia](https://insomnia.rest/)
 
  Once you have got to grips with the APIs you can use our [Swagger](https://pub.sandbox.orcid.org/v2.0/) graphical interface.
 
