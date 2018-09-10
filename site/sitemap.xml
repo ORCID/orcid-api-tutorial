@@ -2,52 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/sandbox/</loc>
-     <lastmod>2018-08-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/read/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/get/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/post/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/put/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/display/</loc>
-     <lastmod>2018-08-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/search/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/resources/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/Other_methods_for_getting_authorised_iDs/</loc>
-     <lastmod>2018-08-09</lastmod>
+     <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
