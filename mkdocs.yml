@@ -8,7 +8,7 @@ extra:
     text: 'Noto Sans'
   logo:
       icon:
-        '/images/id-icon.svg'
+        'docs/images/id-icon.svg'
 pages:
     - 1. Introduction: index.md
     - 2. Set up the Sandbox: sandbox.md

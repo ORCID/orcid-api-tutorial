@@ -17,11 +17,11 @@ a:hover,
 .md-nav__link:hover,
 [data-md-color-primary=grey] .md-typeset a:focus,
 [data-md-color-primary=grey] .md-typeset a:hover{
-    color: #a6ce39;
+    color: #4c8bac;
 }
 
 .md-header{
-	background-color: grey;
+	background-color: #4c8bac;
 }
 
 img {
@@ -33,4 +33,17 @@ img.icon,
 nav img {
     border: none;
     margin: 0;
+}
+
+.md-flex{
+	background-color: #4c8bac;
+}
+
+.md-footer-nav{
+	background-color: #4c8bac;
+}
+
+.md-footer-nav__direction{
+	font-size: 2rem;
+	background-color: #aecb54;
 }
