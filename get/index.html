@@ -61,18 +61,15 @@
 </tr>
 </tbody>
 </table>
-<p>To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
-Enter you own client ID where it says [APP-<strong><em>*</em></strong><strong><em>*</em></strong>***]</p>
-<pre><code>https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&amp;response_type=code&amp;scope=/read-limited%20/activities/update%20/person/update&amp;redirect_uri=https://developers.google.com/oauthplayground
-</code></pre>
-
 <h3 id="get-an-authorization-code">Get an authorization Code</h3>
 <ol>
-<li>Copy the below URL, remembering to fill in your own APP details and paste into a new tab.<br></li>
+<li>To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:</li>
 </ol>
 <pre><code>https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&amp;response_type=code&amp;scope=/read-limited%20/activities/update%20/person/update&amp;redirect_uri=https://developers.google.com/oauthplayground
 </code></pre>
 
+<p>Enter you own client ID where it says [APP-<strong><em>*</em></strong><strong><em>*</em></strong>***]</p>
+<p>Copy your URL, remembering to fill in your own APP details and paste into a new tab and press enter.<br></p>
 <ol>
 <li>An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click <strong>Authorize</strong><br>
 <img src="../images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" /></li>
@@ -86,7 +83,7 @@ Enter you own client ID where it says [APP-<strong><em>*</em></strong><strong><e
 <ol>
 <li>Click the gear icon in the upper right corner to open the <strong>OAuth 2.0 Configuration</strong><br>
 <img src="../images/04-3_google-playground-config.png" width="400" alt="Google OAuth Playground OAuth 2.0 Configuration" /></li>
-<li>Enter the following settings and click <strong>Close</strong></li>
+<li>Change the Oauth endpoints drop down to custom and enter the following settings and click <strong>Close</strong></li>
 </ol>
 <table>
 <thead>
