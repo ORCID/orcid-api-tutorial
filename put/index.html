@@ -6,7 +6,7 @@ To find out the put-code for a particular item we just need to read the record o
 <h2 id="update-an-education-affiliation">Update an education affiliation</h2>
 <ol>
 <li>
-<p>First we need to get a <strong>put code</strong> for the work you just added so open a new Google Playground window and set it up following the first 4 steps from the <a href="/read">Read the record</a> .</p>
+<p>First we need to get a <strong>put code</strong> for the work you just added so open a new Google Playground window and set it up following the first 4 steps from the <a href="../read/">Read the record</a> .</p>
 </li>
 <li>
 <p>This time in the Request URI field enter <code>https://api.sandbox.orcid.org/v3.0/0000-XXXX-XXXX-XXXX/educations</code> . Note that we have added 'educations' to the end of the URI and that it is plural. This means we are fetching a summary of all the education items on this record, not just one (we would put it singular and added / with a put code of the item at the end)</p>
@@ -23,7 +23,7 @@ To find out the put-code for a particular item we just need to read the record o
 <code>https://api.sandbox.orcid.org/v3.0/[ORCID ID]/education/[PUT CODE]</code><br>
 <em>Replace [ORCID ID] with the iD for your Sandbox record, format XXXX-XXXX-XXXX-XXXX and [PUT CODE] with the put-code for your education affiliation</em><br>
 <img src="../images/06-2_request-uri.png" width="400" alt="Google OAuth Playground request URI configuration for updating an education affiliation" /></li>
-<li>Grab the XML from the end of the <a href="/post">POST</a> section again and the click <strong>Enter request body</strong> and paste it in.</li>
+<li>Grab the XML from the end of the <a href="../post/">POST</a> section again and the click <strong>Enter request body</strong> and paste it in.</li>
 <li>Inside the <code>&lt;education:education</code> tag, add <code>put-code=[PUT CODE]</code><br>
 <em>Replace [PUT CODE] with the put-code for your education affiliation, ex <code>&lt;education:education put-code="26971"</code></em><br>
 <img src="../images/06-2_request-body-1.png" width="600" alt="Google OAuth Playground Request Body configuration for updating an education affiliation showing where to place put-code" /></li>
