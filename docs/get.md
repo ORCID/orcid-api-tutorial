@@ -100,6 +100,6 @@ In a real-world situation, this exchange would be done by your system, using a p
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
 <img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" /> <!--update with XML-->
 
-**Important** Keep the Google OAuth Playground open so that you don't lose the configurations you have made in the steps above. You can also save the URL that allows you to initialize the playground with these configurations (to get the URL, click the link icon next to the gear icon in the upper right corner).
+_**Important!** Keep the Google OAuth Playground open so that you don't lose the configurations you have made in the steps above. You can also save the URL that allows you to initialize the playground with these configurations (to get the URL, click the link icon next to the gear icon in the upper right corner)._
 
 Once you have gone through this process to obtain the token, this is all that you need to do further api calls for this ORCID and for these permissions. If you want to make calls for another ORCID or you want to write to a record where before you have only read for example, then you will need to complete the process again and get a new token.
