@@ -56,7 +56,7 @@ To kick off the OAuth process, we'll need to create a special authorization URL 
 |**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes). | ```/authorize``` <br> ```/activities/update```
 |**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
-To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
+To request permission to add/update activities (affiliations, funding, works, peer review items), and to add/update personal items (other-names, keywords, countries, researcher-urls, websites, and personal external identifiers) our authorization URL will be:
 Enter you own client ID where it says [APP-*****************]
 ```
 https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground
@@ -100,4 +100,6 @@ In a real-world situation, this exchange would be done by your system, using a p
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
 <img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" /> <!--update with XML-->
 
-Once you have gone through this process once and you have the token this is all that you need to do further api calls for this ORCID and for these permissions. If you want to make calls for another ORCID or you want to write to a record where before you have only read for example, then you will need to complete the process again and get a new token.
+**Important** Keep the Google OAuth Playground open so that you don't lose the configurations you have made in the steps above. You can also save the URL that allows you to initialize the playground with these configurations (to get the URL, click the link icon next to the gear icon in the upper right corner).
+
+Once you have gone through this process to obtain the token, this is all that you need to do further api calls for this ORCID and for these permissions. If you want to make calls for another ORCID or you want to write to a record where before you have only read for example, then you will need to complete the process again and get a new token.
