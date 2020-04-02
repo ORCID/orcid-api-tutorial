@@ -31,7 +31,7 @@ If you've ever signed into a site using Google or Facebook instead of your crede
 ###Get API credentials
 API credentials consisting of a **client ID** and a **client secret** are needed in order to get Authenticated iDs and/or user permissions.
 
-To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials.
+To get Authenticated iDs, you can use Public or Member API credentials. To get permission to read non-public information or add/update researchers' ORCID records, you'll need Member API credentials. For the rest of this tutorial, when referring to the API please assume that it is the Member API that is being referenced.  
 
 For this tutorial, please use your own sandbox API credentials:
 
@@ -56,19 +56,18 @@ To kick off the OAuth process, we'll need to create a special authorization URL 
 |**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes). | ```/authorize``` <br> ```/activities/update```
 |**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
-To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
-Enter you own client ID where it says [APP-*****************]
-```
-https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground
-```
 
 ###Get an authorization Code
 
-1. Copy the below URL, remembering to fill in your own APP details and paste into a new tab.<br>
-
+1. To request permission to add/update activities (affiliations, funding, works, peer review items), our authorization URL will be:
 ```
 https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://developers.google.com/oauthplayground
 ```
+
+Enter you own client ID where it says [APP-*****************]
+
+Copy your URL, remembering to fill in your own APP details and paste into a new tab and press enter.<br>
+
 
 2. An ORCID sign-in screen listing the requested permissions will appear; sign into your Sandbox account and click **Authorize**<br>
 <img src="../images/04-2_oauth-screen.png" width="400" alt="ORCID OAuth sign-in screen" />
@@ -76,14 +75,14 @@ https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&respo
 <img src="../images/04-2_auth-code-address.png" width="400" alt="ORCID OAuth sign-in screen" /><br><br>
 <img src="../images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" />
 
-###Exchange authorization code for access token & authenticated iD
+###Exchange authorization code for access token and authenticated iD
 Once you have an  Authorization Code, you can exchange it for an Access Token and the Authenticated iD of the user who signed in, which you'll need in order to take the API action(s) you requested permission for. You need to store this securely and privately as it contains access tokens, normally you would store this in a database, for now you can store it in a text file on your computer.
 
 In a real-world situation, this exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. For this tutorial, we'll use Google OAuth Playground to simulate a web application.
 
 1. Click the gear icon in the upper right corner to open the **OAuth 2.0 Configuration**<br>
 <img src="../images/04-3_google-playground-config.png" width="400" alt="Google OAuth Playground OAuth 2.0 Configuration" />
-2. Enter the following settings and click **Close**
+2. Change the Oauth endpoints drop down to custom and enter the following settings and click **Close**
 
 | Field | Value |
 | ------| ------|
@@ -100,4 +99,11 @@ In a real-world situation, this exchange would be done by your system, using a p
 4. Your Access Token and Authenticated iD will appear **Request/Response** section at right.<br>
 <img src="../images/04-3_token-response.png" width="600" alt="Google OAuth Playground json response for an access token request" /> <!--update with XML-->
 
+
+**Save this token**
+
+It is important to save the token you received in the step above as you can easily create any calls you need to make with it. If you loose the token you will have to go through the whole process above again. 
+
 Once you have gone through this process once and you have the token this is all that you need to do further api calls for this ORCID and for these permissions. If you want to make calls for another ORCID or you want to write to a record where before you have only read for example, then you will need to complete the process again and get a new token.
+
+
