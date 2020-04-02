@@ -28,7 +28,7 @@ Before you can edit information on your ORCID record, you'll need to verify your
 *Make note of the 16-digit iD for your Sandbox record - you'll need this throughout the rest of the tutorial!*<br>
 <img src="../images/01-2_new-record.png" width="600" alt="New ORCID Sandbox record" />
 
-##Add info to your Sandbox record
+##<a name ="Add"></a>Add info to your Sandbox record 
 1. **Add a country:** Click the pencil icon beside Country, choose a country and click **Save changes**.<br>
 <img src="../images/01-3_edit-country.png" width="400" alt="ORCID edit country screen" />
 2. **Add employment:** In the **Employment** section, click **Add employment** > **Add manually**, fill out the form and click **Add to list**.<br>

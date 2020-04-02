@@ -9,12 +9,13 @@ extra:
   logo:
       icon:
         'docs/images/id-icon.svg'
-pages:
+nav:
     - 1. Introduction: index.md
     - 2. Set up the Sandbox: sandbox.md
     - 3. GET&#58; authenticated iDs &amp; permission: get.md
-    - 4. POST&#58; an affiliation: post.md
-    - 5. PUT&#58; Update an affiliation: put.md
-    - 6. DISPLAY&#58; Presenting ORCID in your system: display.md
-    - 7. RESOURCES: resources.md
-    - 8. Other methods for getting authorised iDs: Other_methods_for_getting_authorised_iDs.md
+    - 4. READ&#58; the record: read.md
+    - 5. POST&#58; an affiliation: post.md
+    - 6. PUT&#58; Update an affiliation: put.md
+    - 7. DISPLAY&#58; Presenting ORCID in your system: display.md
+    - 8. RESOURCES: resources.md
+    - 9. Other methods for getting authorised iDs: Other_methods_for_getting_authorised_iDs.md
