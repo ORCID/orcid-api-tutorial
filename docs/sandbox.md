@@ -9,10 +9,14 @@ For this tutorial, we'll use ORCID's test environment, the [ORCID Sandbox](https
 To get started, you'll need to register an ORCID iD in the Sandbox.
 
 1. In a new window or tab, visit <a href="https://sandbox.orcid.org/register" target="_blank">https://sandbox.orcid.org/register</a>
-3. Complete the form with a name, email, and password.<br>
-_**IMPORTANT!** Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (ex: sgarcia@mailinator.com)._<br>
-<img src="../images/01-1_register.png" width="600" alt="ORCID Sandbox registration form" />
-4. Click the **I consent…** checkbox and click **Register**.<br>
+2. Complete the form with your first name and email address, and then click the "next" button.<br>
+_**IMPORTANT!** Don't use a real email address! Instead, make up an address  ending in @mailinator.com (ex: sgarcia@mailinator.com)._<br>
+<img src="../images/sandbox.register.png" width="600" alt="ORCID Sandbox registration form step 1" />
+3. Complete step 2 of the registration form with a password, and move on to step 3.<br>
+<img src="../images/sandbox.register.step2.png" width="600" alt="ORCID Sandbox registration form step 2" />
+4. Select your preferred visibility setting, accept the terms of use, click the box next to the text "I'm not a robot", and finally click the "register" button.<br>
+<img src="../images/sandbox.register.step3.png" width="600" alt="ORCID Sandbox registration form step 3" />
+
 *Remember the email and password - you'll need these throughout the rest of the tutorial!*
 
 ##Verify your email address
@@ -31,10 +35,9 @@ Before you can edit information on your ORCID record, you'll need to verify your
 ##<a name ="Add"></a>Add info to your Sandbox record 
 1. **Add a country:** Click the pencil icon beside Country, choose a country and click **Save changes**.<br>
 <img src="../images/01-3_edit-country.png" width="400" alt="ORCID edit country screen" />
-2. **Add employment:** In the **Employment** section, click **Add employment** > **Add manually**, fill out the form and click **Add to list**.<br>
+2. **Add employment:** In the **Employment** section, click **Add employment**, fill out the form and click **Add to list**.<br>
 <img src="../images/01-3_add-employment.png" width="600" alt="ORCID add employment screen" />
 3. Take a look at your employment entry and notice the following fields, which are included with each item on an ORCID record: 
     - **Source:** Person or organization that added the item
-    - **Created:** Date the item was added
-    - **Privacy:** [Visibility setting](https://support.orcid.org/knowledgebase/articles/124518-orcid-visibility-settings) for the item
+    - **Privacy:** [Visibility setting](https://support.orcid.org/hc/en-us/articles/360006897614-Visibility-settings) for the item
 <img src="../images/01-3_employment-item.png" width="600" alt="ORCID employment entry" />

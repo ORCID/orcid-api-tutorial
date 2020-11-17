@@ -13,6 +13,9 @@ For more details, see our [Trademark and iD Display Guidelines](https://orcid.or
 <img src="../images/07_1_kaken_profile_system.png" width="600" alt="ORCID iD displayed on Kaken Profile System for SUENAGA Kiyotake" />
 <br>
 <br>
+You can also just show the iD icon next to the researcher's name as seen in the screenshot below.
+<br>
+<br>
 <img src="../images/07_1_Orcid_id_journal_functional_ecology.png" width="600" alt="ORCID iD displayed in Journal of Functional Ecology article" />
 
 ##Presenting the ORCID OAuth screen & redirect pages
@@ -32,7 +35,7 @@ See [sample text](http://members.orcid.org/api/oauth/presenting-oauth#include-te
 The OAuth screen is designed to look best at a maximum width of 500px.
 <br>
 <br>
-<img src="../images/07-2_oauth.png" width="300" alt="Example OAuth authorization screen" />
+<img src="../images/sandbox.oauth.png" width="400" alt="ORCID OAuth screen" />
 ###4. Provide an appropriate redirect page and close the OAuth window
 Remember that users can either authorize or deny access - make sure to show a different message for each case.
 <br>
