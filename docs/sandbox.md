@@ -11,7 +11,7 @@ To get started, you'll need to register an ORCID iD in the Sandbox.
 1. In a new window or tab, visit <a href="https://sandbox.orcid.org/register" target="_blank">https://sandbox.orcid.org/register</a>
 2. Complete the form with your first name and email address, and then click the "next" button.<br>
 _**IMPORTANT!** Don't use a real email address! Instead, make up an address  ending in @mailinator.com (ex: sgarcia@mailinator.com)._<br>
-<img src="../images/sandbox-register-step1.PNG" width="600" alt="ORCID Sandbox registration form step 1" />
+<img src="../images/sandbox-register-step1.png" width="600" alt="ORCID Sandbox registration form step 1" />
 3. Complete step 2 of the registration form with a password, and move on to step 3.<br>
 <img src="../images/sandbox-register-step2.png" width="600" alt="ORCID Sandbox registration form step 2" />
 4. Select your preferred visibility setting, accept the terms of use, click the box next to the text "I'm not a robot", and finally click the "register" button.<br>
