@@ -17,24 +17,29 @@ You can also just show the iD icon next to the researcher's name as seen in the 
 <img src="../images/07_1_Orcid_id_journal_functional_ecology.png" width="600" alt="ORCID iD displayed in Journal of Functional Ecology article" />
 
 ##Presenting the ORCID OAuth screen & redirect pages
+
 In order to provide a consistent experience for users, we recommend following the guidelines below for presenting ORCID OAuth in your system. For more details, see our help doc on [Presenting OAuth](http://members.orcid.org/api/oauth/presenting-oauth).
 
 ###1. Use a button or link to connect users to ORCID via OAuth
+
 See [example buttons and links](http://members.orcid.org/api/oauth/presenting-oauth#use-button)
 
 <img src="../images/07-2_link-id-button.png" width="400" alt="Example manuscript submission form with 'Create or Connect your iD' button" />
 
 ###2. Include text describing ORCID and a link to the ORCID website
+
 See [sample text](http://members.orcid.org/api/oauth/presenting-oauth#include-text)
 
 <img src="../images/07-2_orcid-text.png" width="400" alt="Example manuscript submission form with info about ORCID" />
 
 ###3. Present the OAuth sign-in screen as a popup or modal window
+
 The OAuth screen is designed to look best at a maximum width of 500px.
 
 <img src="../images/sandbox-oauth.png" width="400" alt="ORCID OAuth screen" />
 
 ###4. Provide an appropriate redirect page and close the OAuth window
+
 Remember that users can either authorize or deny access - make sure to show a different message for each case.
 
 <img src="../images/07-2_redirect.png" width="300" alt="Example OAuth redirect screen" />
