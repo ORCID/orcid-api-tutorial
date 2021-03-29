@@ -2,11 +2,11 @@ In  a real world situation, you'll need to gather up iDs for researchers whose O
 
 **Authenticated iDs**
 
-ORCID is about disambiguation, it's important that you get the correct iD for each researcher. The best way to do this is to collect **Authenticated ORCID iDs**, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. [Learn more about Authenticated iDs](https://orcid.org/blog/2017/02/20/whats-so-special-about-signing)
+ORCID is about disambiguation, it's important that you get the correct iD for each researcher. The best way to do this is to collect **Authenticated ORCID iDs**, which means that each researcher signs into their ORCID account and authorizes your system to obtain their iD. [Learn more about Authenticated iDs](https://info.orcid.org/whats-so-special-about-signing-in/)
 
 **Record access permission**
 
-Control over access to data in your ORCID record is one of [ORCID's core princples](https://orcid.org/about/what-is-orcid/principles). While you can read public ORCID data without the record owner's involvement, some API actions require permission:
+Control over access to data in your ORCID record is one of [ORCID's core principles](https://info.orcid.org/what-is-orcid/). While you can read public ORCID data without the record owner's involvement, some API actions require permission:
 
 * Get an Authenticated ORCID iD
 * Read non-public data (items with privacy set to 'Trusted parties')
@@ -35,7 +35,7 @@ To get Authenticated iDs, you can use Public or Member API credentials. To get p
 
 For this tutorial, please use your own sandbox API credentials.
 
-To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application-sandbox)
+To request API credentials, see [Request API credentials](https://info.orcid.org/register-a-client-application-sandbox-member-api/)
 
 ## Three Step OAuth journey
 
@@ -51,9 +51,9 @@ To kick off the OAuth process, we'll need to create a special authorization URL 
 
 | Parameter | Description | Example |
 | ----------| ----------- | ------- |
-|**client_id**| Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see [Request API credentials](https://orcid.org/content/register-client-application) | ```[APP-*****************]``` |
+|**client_id**| Your Member or Public API client ID (issued by ORCID)<br>To request API credentials, see [Request API credentials](https://info.orcid.org/register-a-client-application-production-member-api/) | ```[APP-*****************]``` |
 |**response_type**|  | ```code``` |
-|**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://members.orcid.org/api/oauth/orcid-scopes) | ```/person/update``` <br> ```/activities/update```
+|**scope**| API action(s) you want to request permission for, from the list of [ORCID Scopes](https://info.orcid.org/documentation/integration-guide/getting-started-with-your-orcid-integration/#easy-faq-2569) | ```/person/update``` <br> ```/activities/update```
 |**redirect_uri**| Page on your site that users will see after they complete the authorization process (must be on the list of allowed redirect URIs you specified when requesting your API credentials)  | ```https://developers.google.com/oauthplayground``` |
 
 To request permission to add/update activities (affiliations, funding, works, peer review items), and to add/update personal items (other-names, keywords, countries, researcher-urls, websites, and personal external identifiers) our authorization URL will be:

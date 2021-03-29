@@ -5,7 +5,7 @@ You have just followed a method a custom integration would use to get ORCIDs fro
 
 ##Servive Provider systems
 
-Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://members.orcid.org/api/orcid-enabled-systems) for more details.
+Some publishing, research information and repository software systems support collecting authenticated iDs and permissions right out of the box. See our list of [ORCID-enabled systems](https://info.orcid.org/documentation/integration-guide/vendor-systems/) for more details.
 
 Configuration steps and customization options vary widely between systems - check your system's documentation for complete information.
 

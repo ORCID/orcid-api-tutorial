@@ -45,7 +45,7 @@ In this tutorial you will learn:
 ORCID's web interface gives researchers a way to interact with their record, but the real power of ORCID lies in the underlying data, which can be accessed by people and systems via Application Programming Interfaces (APIs).
 
 * **Public API:** Free to anyone with an ORCID iD
-* **Member API:** Available to ORCID [member organizations](https://orcid.org/about/membership) (Sandbox Member API freely available for testing)
+* **Member API:** Available to ORCID [member organizations](https://info.orcid.org/about-membership/) (Sandbox Member API freely available for testing)
 * **Premium Member API** Available to ORCID premium member organizations (Sandbox Member API freely available for testing)
 
 | Features       | Public API | Member API |Premium Member API |
@@ -65,4 +65,4 @@ All of the ORCID APIs are  based on the same set of technologies:
 * **OAuth:** ORCID  APIs use the [OAuth 2.0 authentication protocol](https://oauth.net/2/) to grant client  applications access to users' ORCID records.
 * **XML/JSON:** ORCID APIs support data exchange in either XML or JSON format.
 
-[Learn more about the ORCID APIs](https://members.orcid.org/api/about-orcid-apis)
+[Learn more about the ORCID APIs](https://info.orcid.org/documentation/)
