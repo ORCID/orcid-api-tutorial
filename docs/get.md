@@ -64,7 +64,7 @@ https://sandbox.orcid.org/oauth/authorize?client_id=[APP-****************]&respo
 
 1. Copy the URL, remembering to fill in your own APP details, paste it into a new tab and press enter.<br>
 2. An ORCID sign-in screen will appear; sign into your Sandbox account to see the OAuth screen and click **Authorize**<br>
-<img src="../images/sandbox.oauth.png" width="400" alt="ORCID OAuth screen" />
+<img src="../images/sandbox-oauth.png" width="400" alt="ORCID OAuth screen" />
 3. After granting permission, you'll be redirected to the Google OAuth Playground. A 6-character code will appear at the end of the redirect URI in the browser address bar (and under the **Step 2** section on the left of the page)<br>
 <img src="../images/04-2_auth-code-address.png" width="400" alt="ORCID OAuth sign-in screen" /><br><br>
 <img src="../images/04-2_auth-code.png" width="400" alt="Browser address bar showing OAuth authorization code" />
