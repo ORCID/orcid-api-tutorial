@@ -1,3 +1,5 @@
+#This guide now lives at https://info.orcid.org/hands-on-with-the-orcid-api/ please go there for the latest version. Thank you. 
+
 ##About ORCID
 
 ORCID provides a persistent identifier for researchers _AND_ tools (like APIs) to help make connections between researchers, their contributions, and affiliations. **Why?** To help people find information, and to simplify reporting and analysis.
